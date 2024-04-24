@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import { useDispatch } from "react-redux";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { login } from "../../store/slice/authSlice";
+import { useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
+import { login } from "../../store/slices/authSlice";
 
 const payload = {
   token: "abc123",
@@ -12,39 +12,36 @@ const payload = {
   },
 };
 
-export function Form() {
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-  //   const [form, setForm] = useState({
-  //     email: "",
-  //     password: "",
-  //   });
+export function Form({ handleHidden }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
 
-  //   const handleInput = ({ target: { name, value } }) => {
-  //     setForm((form) => ({
-  //       ...form,
-  //       [name]: value,
-  //     }));
-  //   };
+  const handleInput = ({ target: { name, value } }) => {
+    setForm((form) => ({
+      ...form,
+      [name]: value,
+    }));
+  };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  //     try {
-  //       // login request here
-  //       dispatch(login(payload));
-  //       navigate("/homepage");
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
+    try {
+      // login request here
+      dispatch(login(payload));
+      navigate("/homepage");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="flex flex-col ">
-      <form
-        className="flex flex-col p-[30px] relative"
-        //   onSubmit={handleSubmit}
-      >
+      <form className="flex flex-col p-[30px] relative" onSubmit={handleSubmit}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -70,23 +67,27 @@ export function Form() {
           type="email"
           name="email"
           placeholder="email"
-          //   onInput={handleInput}
-          //   value={form.email}
+          onInput={handleInput}
+          value={form.email}
         />
         <input
           className="border-2 border-white mb-[15px] h-[2.5rem] rounded-3xl p-[20px]"
           type="password"
           name="password"
           placeholder="password"
-          //   onInput={handleInput}
-          //   value={form.password}
+          onInput={handleInput}
+          value={form.password}
         />
-        <button
-          className="bg-[#00FAA8] h-[2.5rem] rounded-3xl w-[50%] text-[#1E293B]"
-          type="submit"
-        >
-          Log in
-        </button>
+
+        <div className="flex">
+          <button
+            className="bg-[#00FAA8] h-[2.5rem] rounded-3xl w-[50%] text-[#1E293B]"
+            type="submit"
+          >
+            Log in
+          </button>
+          <button className="text-white ml-[50px]" onClick={handleHidden} type="button">Sign Up</button>
+        </div>
       </form>
     </div>
   );
