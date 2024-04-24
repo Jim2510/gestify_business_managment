@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1",
+        "producer": "Producer A",
+        "category": "Category 1",
+        "stock-count": 20
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 15
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 25
+    },
+    {
+        "id": 4,
+        "name": "Product 4",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 10
+    },
+    {
+        "id": 5,
+        "name": "Product 5",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 18
+    },
+    {
+        "id": 6,
+        "name": "Product 6",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 22
+    },
+    {
+        "id": 7,
+        "name": "Product 7",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 12
+    },
+    {
+        "id": 8,
+        "name": "Product 8",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 19
+    },
+    {
+        "id": 9,
+        "name": "Product 9",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 28
+    },
+    {
+        "id": 10,
+        "name": "Product 10",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 14
+    },
+    {
+        "id": 11,
+        "name": "Product 11",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 16
+    },
+    {
+        "id": 12,
+        "name": "Product 12",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 30
+    },
+    {
+        "id": 13,
+        "name": "Product 13",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 9
+    },
+    {
+        "id": 14,
+        "name": "Product 14",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 21
+    },
+    {
+        "id": 15,
+        "name": "Product 15",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 26
+    },
+    {
+        "id": 16,
+        "name": "Product 16",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 11
+    },
+    {
+        "id": 17,
+        "name": "Product 17",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 17
+    },
+    {
+        "id": 18,
+        "name": "Product 18",
+        "producer": "Producer C",
+        "category": "Category 1",
+        "stock-count": 23
+    },
+    {
+        "id": 19,
+        "name": "Product 19",
+        "producer": "Producer A",
+        "category": "Category 3",
+        "stock-count": 13
+    },
+    {
+        "id": 20,
+        "name": "Product 20",
+        "producer": "Producer B",
+        "category": "Category 2",
+        "stock-count": 20
+    }
+]

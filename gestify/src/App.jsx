@@ -7,6 +7,7 @@ import { DashboardX } from "./pages/DasboardX";
 import { DashboardDs } from "./pages/DashboardDs";
 import { DashboardLogistic } from "./pages/DashboardLogistic";
 import { DashboardMan } from "./pages/DashboardMan";
+import { useSelector } from "react-redux";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -24,7 +25,12 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
-          <Route path="/dashboard" element={<DashboardLayout />}>
+
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <DashboardLayout />
+            </ProtectedRoute>
+          }>
             <Route path="tables" element={<DashboardTables />} />
             <Route path="expenditure" element={<DashboardX />} />
             <Route path="sales" element={<DashboardDs />} />

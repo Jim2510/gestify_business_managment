@@ -33,7 +33,7 @@ export function FormRegister({ handleHidden }) {
         try {
             // login request here
             dispatch(login(payload));
-            navigate("/dashboard/tables");
+            navigate("/homepage");
         } catch (error) {
             console.error(error);
         }
