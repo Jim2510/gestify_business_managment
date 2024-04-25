@@ -1,5 +1,3 @@
-const arrBtn = ["Clienti", "Documenti", "Fatture"];
-
 function SingleBtn({ btnName }) {
   return (
     <>
@@ -10,7 +8,7 @@ function SingleBtn({ btnName }) {
   );
 }
 
-export function BtnBo() {
+export function BtnBo({ arrBtn }) {
   return (
     <>
       <div className="p-5">
