@@ -8,6 +8,7 @@ import { DashboardDs } from "./pages/DashboardDs";
 import { DashboardLogistic } from "./pages/DashboardLogistic";
 import { DashboardMan } from "./pages/DashboardMan";
 import { useSelector } from "react-redux";
+import { BackofficeLayout } from "./layout/BackofficeLayout";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -26,17 +27,28 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
 
-          <Route path="/dashboard" element={
-            <ProtectedRoute>
-              <DashboardLayout />
-            </ProtectedRoute>
-          }>
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route path="tables" element={<DashboardTables />} />
             <Route path="expenditure" element={<DashboardX />} />
             <Route path="sales" element={<DashboardDs />} />
             <Route path="logistic" element={<DashboardLogistic />} />
             <Route path="administration" element={<DashboardMan />} />
           </Route>
+          <Route
+            path="/backoffice"
+            element={
+              <ProtectedRoute>
+                <BackofficeLayout />
+              </ProtectedRoute>
+            }
+          ></Route>
           {/* <Route path="/landingpage" element={<NavLand />} />
           <Route path="/" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
