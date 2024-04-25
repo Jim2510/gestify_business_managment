@@ -4,6 +4,8 @@ import { RowF } from "./RowF";
 import { BtnF } from "./BtnF";
 import { FormF } from "./FormF";
 
+const titleTable = ["Descrizione", "QT", "N°"];
+
 export function ListBo() {
   const handleForm = () => {
     const form = document.getElementById("form");
@@ -15,7 +17,11 @@ export function ListBo() {
     <>
       <div className="relative">
         <div className=" sticky top-0 bg-white ">
-          <Intst />
+          <Intst
+            first={titleTable[0]}
+            second={titleTable[1]}
+            third={titleTable[2]}
+          />
         </div>
         {fatt &&
           fatt.map((el) => (

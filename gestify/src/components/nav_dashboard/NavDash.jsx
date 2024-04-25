@@ -5,7 +5,6 @@ const data = [
   { btn: "Acquisti", path: "/dashboard/expenditure" },
   { btn: "Vendite", path: "/dashboard/sales" },
   { btn: "Logistica", path: "/dashboard/logistic" },
-  { btn: "Amministrazione", path: "/dashboard/administration" },
 ];
 
 function Button({ name_btn, link }) {
