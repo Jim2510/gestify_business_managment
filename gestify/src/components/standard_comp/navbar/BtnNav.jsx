@@ -1,12 +1,13 @@
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Btn() {
   const buttons = [
     { title: "Home", path: "/homepage" },
-    { title: "Dashboard", path: "/dashboard/tables" },
+    { title: "Dashboard", path: "/dashboard" },
     { title: "Events", path: "/scheduler/calendar" },
+    { title: "BackOffice", path: "/backoffice" },
     { title: "Storage", path: "" },
   ];
 
@@ -14,8 +15,7 @@ function Btn() {
     <>
       {buttons.map((btn, index) => (
         <Button key={index}>
-          {/* <Link to={btn.path}></Link> */}
-          {btn.title}
+          <Link to={btn.path}>{btn.title}</Link>
         </Button>
       ))}
     </>
@@ -43,9 +43,7 @@ function Button({ children, btn }) {
       onMouseLeave={handleMouseLeave}
       className="text-[14px] relative flex flex-col justify-center items-center h-full rounded-xl dark:hover:shadow-gray-100 px-5 py-1 text-black dark:text-white"
     >
-      {/* <Link to=></Link> */}
-      {btn}
-      {children}
+      <Link to={btn}>{children}</Link>
       <animated.div
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#02f9ae] h-[2px]"
         style={sidebarSpring}

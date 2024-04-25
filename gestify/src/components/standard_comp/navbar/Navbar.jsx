@@ -1,19 +1,19 @@
 import { BtnNav } from "./BtnNav";
 import { BtnNavMedia } from "./BtnNavMedia";
-// import { useDispatch } from "react-redux";
-// import { logout } from "../store/slices/authSlice";
+import { useDispatch } from "react-redux";
+import { logout } from "../../../store/slices/authSlice";
 import { useAnimation } from "../../../hooks/useAnimation";
 import { animated } from "@react-spring/web";
 
 export function Navbar() {
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const { sidebarSpring, navSpring, handleHidden, handleUserHidden } =
     useAnimation();
 
-  //   const handleLogOut = () => {
-  //     dispatch(logout());
-  //   };
+  const handleLogOut = () => {
+    dispatch(logout());
+  };
 
   return (
     <>
@@ -70,7 +70,7 @@ export function Navbar() {
               >
                 <button
                   className="text-black font-semibold cursor-pointer w-full shadow-lg p-2 m-3 text-center active:shadow-sm h-[40px] overflow-hidden"
-                  //   onClick={handleLogOut}
+                  onClick={handleLogOut}
                 >
                   Log Out
                 </button>
