@@ -1,4 +1,4 @@
-export function Intst() {
+export function Intst({ first, second, third }) {
   return (
     <>
       <div className="w-full h-full px-1 text-[14px] font-semibold">
@@ -17,13 +17,13 @@ export function Intst() {
             </svg>
           </div>
           <div className="text-center border-l-2 border-gray-400 col-span-5 border-b-2 flex items-center justify-center">
-            Description
+            {first}
           </div>
           <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
-            Tot
+            {second}
           </div>
           <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
-            N°
+            {third}
           </div>
         </div>
       </div>
