@@ -8,6 +8,7 @@ import { DashboardDs } from "./pages/DashboardDs";
 import { DashboardLogistic } from "./pages/DashboardLogistic";
 import { DashboardMan } from "./pages/DashboardMan";
 import { useSelector } from "react-redux";
+import { StorageLayout } from "./layout/StorageLayout";
 import { BackofficeLayout } from "./layout/BackofficeLayout";
 import { ActivitiesLayout } from "./layout/ActivitiesLayout";
 
@@ -27,15 +28,12 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
-
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardLayout />
-              </ProtectedRoute>
-            }
-          >
+          <Route path="/storage" element={<StorageLayout />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <DashboardLayout />
+            </ProtectedRoute>
+          }>
             <Route path="tables" element={<DashboardTables />} />
             <Route path="expenditure" element={<DashboardX />} />
             <Route path="sales" element={<DashboardDs />} />
