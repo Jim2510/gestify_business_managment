@@ -2,7 +2,7 @@ export function RowF({ description, tot, number }) {
   return (
     <>
       <div className="w-full h-full px-1 text-[13px]">
-        <div className="grid grid-cols-8 grid-rows-1 justify-between">
+        <div className="grid grid-cols-12 grid-rows-1 justify-between">
           <div className=" p-2 text-center border-gray-400 flex justify-center items-center col-span-1 border-b-2">
             <a href="">
               <svg
@@ -18,14 +18,17 @@ export function RowF({ description, tot, number }) {
               </svg>
             </a>
           </div>
-          <div className="text-center border-l-2 border-gray-400 col-span-5 border-b-2 flex items-center justify-center">
+          <div className="text-center border-l-2 border-gray-400 col-span-6 border-b-2 flex items-center justify-center">
             {description}
           </div>
-          <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
+          <div className="text-center border-l-2 border-gray-400 col-span-2 border-b-2 flex items-center justify-center">
             {tot}
           </div>
-          <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
+          <div className="text-center border-l-2 border-gray-400 col-span-2 border-b-2 flex items-center justify-center">
             {number}
+          </div>
+          <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
+            <input type="checkbox" />
           </div>
         </div>
       </div>

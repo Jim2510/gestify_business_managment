@@ -33,7 +33,7 @@ export function ListBo() {
             />
           ))}
         <div className="sticky bottom-0 w-full h-[50px] bg-white border-t-2 border-gray-400">
-          <BtnF handleForm={handleForm} />
+          <BtnF handleAdd={handleForm} />
         </div>
         <div id="form" className="absolute w-full h-full top-0 bg-white hidden">
           <div className="fixed ml-4 mt-4">
