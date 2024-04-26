@@ -3,6 +3,7 @@ import { useSpring } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { useState } from "react";
 import { FormRegister } from "../components/form_login/FormRegister"
+
 export function Login() {
   const [isHidden, setHidden] = useState(false);
   const [isHidden2, setHidden2] = useState(true);
