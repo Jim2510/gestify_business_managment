@@ -7,7 +7,7 @@ function Btn() {
     { title: "Home", path: "/homepage" },
     { title: "Dashboard", path: "/dashboard" },
     { title: "Events", path: "/scheduler/calendar" },
-    { title: "Storage", path: "" },
+    { title: "Storage", path: "/storage" },
   ];
 
   return (
