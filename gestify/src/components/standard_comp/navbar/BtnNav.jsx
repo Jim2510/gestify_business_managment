@@ -7,7 +7,12 @@ function Btn() {
     { title: "Home", path: "/homepage" },
     { title: "Dashboard", path: "/dashboard" },
     { title: "Events", path: "/scheduler/calendar" },
+<<<<<<< HEAD
     { title: "Storage", path: "/storage" },
+=======
+    { title: "BackOffice", path: "/backoffice" },
+    { title: "Storage", path: "" },
+>>>>>>> df850d2254fd58b71ed9bf52f0ad2c2cc480db3a
   ];
 
   return (
