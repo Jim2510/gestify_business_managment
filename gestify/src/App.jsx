@@ -10,6 +10,7 @@ import { DashboardMan } from "./pages/DashboardMan";
 import { useSelector } from "react-redux";
 import { StorageLayout } from "./layout/StorageLayout";
 import { BackofficeLayout } from "./layout/BackofficeLayout";
+import { ActivitiesLayout } from "./layout/ActivitiesLayout";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -70,6 +71,7 @@ function App() {
           <Route path="/scheduler" element={<SchedulerLayout />}>
             <Route path="calendar" element={<Calendar />} />
           </Route> */}
+          <Route path="activities" element={<ActivitiesLayout />} />
         </Routes>
       </div>
     </>

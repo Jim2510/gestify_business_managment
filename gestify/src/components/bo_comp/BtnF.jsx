@@ -1,9 +1,9 @@
-export function BtnF({ handleForm }) {
+export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
   return (
     <>
       <div className="w-full h-full flex">
         <div className="group w-[25%] h-full flex justify-center items-center relative">
-          <button onClick={handleForm}>
+          <button onClick={handleAdd}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -20,7 +20,7 @@ export function BtnF({ handleForm }) {
           </div>
         </div>
         <div className="group relative w-[25%] h-full flex justify-center items-center">
-          <button>
+          <button onClick={handleRemove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -37,7 +37,7 @@ export function BtnF({ handleForm }) {
           </div>
         </div>
         <div className="group relative w-[25%] h-full flex justify-center items-center">
-          <button>
+          <button onClick={handleUpdate}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -53,7 +53,27 @@ export function BtnF({ handleForm }) {
             CHANGE
           </div>
         </div>
-        <div className="group relative w-[25%] h-full flex justify-center items-center"></div>
+        <div className="group relative w-[25%] h-full flex justify-center items-center">
+          <button onClick={handleRefresh}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fillRule="currentColor"
+              className="bi bi-arrow-clockwise"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"
+              />
+              <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+            </svg>
+          </button>
+          <div className="absolute w-[100px] h-[18px] bg-white top-[-10px] border-2 border-gray-400 text-[12px] hidden justify-center items-center group-hover:flex">
+            REFRESH
+          </div>
+        </div>
       </div>
     </>
   );
