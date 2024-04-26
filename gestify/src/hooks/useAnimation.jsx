@@ -4,6 +4,7 @@ import { useState } from "react";
 export function useAnimation() {
   const [isHidden, setIsHidden] = useState(false);
   const [userHidden, setUserHidden] = useState(false);
+  const [isHover, setIsHover] = useState(true);
 
   const handleHidden = () => {
     setIsHidden(!isHidden);
@@ -41,6 +42,11 @@ export function useAnimation() {
     width: userHidden ? 250 : 0,
   });
 
+  const cardStyle = useSpring({
+    width: isHover ? 250 : 300,
+    height: isHover ? 250 : 300,
+  });
+
   return {
     springs,
     springs2,
@@ -49,5 +55,8 @@ export function useAnimation() {
     navSpring,
     handleHidden,
     handleUserHidden,
+    cardStyle,
+    isHover,
+    setIsHover,
   };
 }
