@@ -45,6 +45,9 @@ export function useAnimation() {
   const cardStyle = useSpring({
     width: isHover ? 250 : 300,
     height: isHover ? 250 : 300,
+    config: { duration: 200 },
+    transform: isHover ? `scale(${1})` : `scale(${1.2})`,
+    zIndex: isHover ? 1 : 20,
   });
 
   return {
