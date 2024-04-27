@@ -1,7 +1,12 @@
+import { useAnimation } from '../../hooks/useAnimation'
+import { animated } from '@react-spring/web'
 export function Product({ product }) {
+    const { isHover, setIsHover, cardStyle } = useAnimation(false)
+    const handleMouseEnter = () => setIsHover(false)
+    const handleMouseLeave = () => setIsHover(true)
 
     return (
-        <div className="flex flex-col justify-around shadow-lg items-center rounded-2xl w-[250px] h-[250px] ml-[10px] mb-[15px] hover:h-[300px] hover:w-[300px] border-[3px] border-[#1E293B]">
+        <animated.div style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="flex flex-col justify-around shadow-lg items-center rounded-2xl w-[250px] h-[250px] ml-[10px] mb-[15px] border-[3px] border-[#1E293B] bg-white">
             <div className="w-[50%]"><img src={product.image} /></div>
             <div className="font-semibold">{product.name}</div>
             <div className="font-semibold flex flex-col">Stock <span className="text-[#1E293B] bg-[#02f9ae] rounded-md ">{product.stock_count}</span></div>
@@ -11,6 +16,6 @@ export function Product({ product }) {
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="" class="fill-red-700 ml-[80px] cursor-pointer" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
                 </svg></div>
-        </div>
+        </animated.div>
     )
 }
