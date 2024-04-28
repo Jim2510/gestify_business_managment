@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TitleSection } from "../standard_comp/TitleSection";
 import { BtnBo } from "./BtnBo";
 import { ListBo } from "./ListBo";
@@ -8,6 +8,7 @@ import { Docs } from "./Docs";
 const arrBtn = ["Clienti", "Documenti", "Fatture"];
 
 export function BaseBack() {
+  const [data, setData] = useState([]);
   const [selBtn, setSelBtn] = useState("Fatture");
 
   const handleBtnClick = (btnName) => {
@@ -24,6 +25,23 @@ export function BaseBack() {
         return <ListBo />;
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/api/products");
+        if (res.ok) {
+          const datag = await res.json();
+          setData(datag);
+          console.log(datag);
+        }
+      } catch (error) {
+        console.error("Errore nella richiesta:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
