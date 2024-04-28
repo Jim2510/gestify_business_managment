@@ -71,7 +71,7 @@ function App() {
           <Route path="/scheduler" element={<SchedulerLayout />}>
             <Route path="calendar" element={<Calendar />} />
           </Route> */}
-          <Route path="activities" element={<ActivitiesLayout />} />
+          <Route path="/orderhistory" element={<ActivitiesLayout />} />
         </Routes>
       </div>
     </>

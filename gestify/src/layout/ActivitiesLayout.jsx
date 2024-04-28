@@ -6,10 +6,10 @@ import { Activities } from "../pages/Activities";
 
 export function ActivitiesLayout() {
     return (
-        <div >
+        <>
            <Sidebar />
            <Navbar />
            <Activities />
-        </div>
+        </>
     )
 }
