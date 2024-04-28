@@ -14,29 +14,35 @@ export function Login() {
   const register = useSpring({ opacity: isHidden ? 1 : 0, left: isHidden ? 0 : -430 });
   const login = useSpring({ opacity: isHidden2 ? 1 : 0, left: isHidden ? -430 : 0 });
   return (
-    <div className="flex justify-center items-center w-[100vw] h-[100vh] bg-[#1E293B]">
+    <div className="flex justify-center items-center w-[100vw] h-[100vh] bg-white">
       <div className="flex-1 flex justify-center">
         <div className="w-[500px] relative">
-          <img
-            src="../src/assets/gestify.png"
-            alt=""
-            width={400}
-            height={300}
-          />
-          <animated.div className="absolute" style={register}>
-            <FormRegister handleHidden={handleHidden} />
+          <img className="w-[350px] absolute top-[-270px]" src="../src/assets/gestify (2).png" alt="" />
+          <animated.div className="absolute top-[-120px]" style={register}>
+            <FormRegister />
           </animated.div>
-          <animated.div className="absolute" style={login}>
-            <Form handleHidden={handleHidden} />
+          <animated.div className="absolute top-[-120px]" style={login}>
+            <Form />
           </animated.div>
         </div>
       </div>
-      <div className="flex-1 shadow-lg h-full flex justify-center items-center bg-white rounded-[340px]">
-        <img
-          className="max-h-[70%] max-w-[80%]"
-          src="https://static.vecteezy.com/system/resources/previews/003/689/228/non_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg"
-          alt=""
-        />
+      <div className="flex-1 shadow-lg h-full flex-col justify-center items-center bg-[#02f9ae] rounded-tl-[3px] rounded-bl-[400px]">
+        <div className="flex justify-center items-center">
+          <img
+            className="max-h-[70%] max-w-[80%]"
+            src="../src/assets/loginImage-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center font-bold text-white text-center">
+          <div className=" text-[32px]">
+            Welcome back in GESTIFY.
+            <br />
+            Are you new here?
+          </div>
+          <button onClick={handleHidden} className="border-[3px] border-white rounded-full w-[120px] text-[18px] h-[3rem] mt-[15px]">Sign up</button>
+        </div>
+
       </div>
     </div>
   );

@@ -46,14 +46,14 @@ export function Storage() {
     return (
         <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center">
             <h1 className="font-bold text-[30px] ">Storage</h1>
-            <div className="flex flex-col w-[80%] h-[700px] shadow-lg border-t-[4px] border-t-[#1E293B] rounded-md overflow-auto  min-h-[500px]">
-                <div className="bg-white w-[20%] h-[10%] rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center relative border-[3px] border-[#1E293B]">
+            <div className="flex flex-col w-[80%] h-[700px] shadow-lg border-t-[4px] border-t-[#1E293B] rounded-md overflow-auto min-h-[500px]">
+                <div className="bg-white w-[20%] rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center relative border-[3px] border-[#1E293B]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="" class="fill-[#1E293B] " viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
-                    <input style={inputStyle.input} className="w-[70%] border-none text-[20px]" onChange={(e) => { setSearchInput(e.target.value) }} onInput={(e) => handleToggle(e)} type="text" placeholder="Search" />
+                    <input style={inputStyle.input} className="w-[70%] border-none text-[20px] h-[50%] bg-tranparent" onChange={(e) => { setSearchInput(e.target.value) }} onInput={(e) => handleToggle(e)} type="text" placeholder="Search" />
                 </div>
-                <div style={searchBar} className="bg-white w-[17%] flex-col rounded-xl overflow-y-scroll absolute z-20 mt-[65px] max-h-[300px] ml-[10px]">{filteredProducts.map((result, id) => <div className="px-[5px] py-[10px] hover:bg-[#efefef]" key={id}>{result.name}</div>)}</div>
+                <div style={searchBar} className="bg-white w-[17%] flex-col rounded-xl overflow-y-scroll absolute z-20 mt-[65px] max-h-[300px] ml-[10px]">{filteredProducts.map((result, id) => <div className="px-[5px] py-[10px] hover:bg-[#efefef] font-semibold text-[#1E293B]" key={id}>{result.name}</div>)}</div>
                 <div className="w-full grid grid-cols-5">
                     {prods && records.map((product) => <Product key={product.id} product={product} />)}
                 </div>
