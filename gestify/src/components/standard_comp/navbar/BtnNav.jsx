@@ -9,6 +9,7 @@ function Btn() {
     { title: "Events", path: "/scheduler/calendar" },
     { title: "BackOffice", path: "/backoffice" },
     { title: "Storage", path: "/storage" },
+    { title: "Orders", path: "/orderhistory" }
   ];
 
   return (

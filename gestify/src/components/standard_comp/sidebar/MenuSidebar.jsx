@@ -8,11 +8,7 @@ export function MenuSidebar() {
           <div className="w-[30%] border-b-2 ml-3"></div>
         </div>
         <div className="w-full my-5 flex flex-col justify-center gap-4 items-center text-[14px] transition-colors ease-in-out delay-300">
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              ORDER HISTORY
-            </span>
-          </button>
+          
           <button className="px-5 flex justify-center items-center rounded-2xl p-2">
             <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
               NOTES
