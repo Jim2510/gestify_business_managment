@@ -26,10 +26,10 @@ export function Login() {
           </animated.div>
         </div>
       </div>
-      <div className="flex-1 shadow-lg h-full flex-col justify-center items-center bg-[#02f9ae] rounded-tl-[3px] rounded-bl-[400px]">
+      <div className="flex-1 shadow-lg h-full flex-col justify-center items-center bg-[#02f9ae] rounded-tl-[3px] rounded-bl-[400px] 2xl:rounded-bl-[700px]">
         <div className="flex justify-center items-center">
           <img
-            className="max-h-[70%] max-w-[80%]"
+            className="max-h-[70%] max-w-[80%] 2xl:mt-[150px]"
             src="../src/assets/loginImage-removebg-preview.png"
             alt=""
           />
