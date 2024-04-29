@@ -1,7 +1,7 @@
 export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
   return (
     <>
-      <div className="w-full h-full flex">
+      <div className="w-full h-full flex bg-[#89f9ea]">
         <div className="group w-[25%] h-full flex justify-center items-center relative">
           <button onClick={handleAdd}>
             <svg
@@ -19,7 +19,7 @@ export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
             ADD
           </div>
         </div>
-        <div className="group relative w-[25%] h-full flex justify-center items-center">
+        <div className="border-l-2 border-gray-400 group relative w-[25%] h-full flex justify-center items-center">
           <button onClick={handleRemove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
             REMOVE
           </div>
         </div>
-        <div className="group relative w-[25%] h-full flex justify-center items-center">
+        <div className="border-l-2 border-gray-400 group relative w-[25%] h-full flex justify-center items-center">
           <button onClick={handleUpdate}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
             CHANGE
           </div>
         </div>
-        <div className="group relative w-[25%] h-full flex justify-center items-center">
+        <div className="border-l-2 border-gray-400 group relative w-[25%] h-full flex justify-center items-center">
           <button onClick={handleRefresh}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

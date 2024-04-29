@@ -9,7 +9,7 @@ function Btn() {
     { title: "Events", path: "/scheduler/calendar" },
     { title: "BackOffice", path: "/backoffice" },
     { title: "Storage", path: "/storage" },
-    { title: "Orders", path: "/orderhistory" }
+    { title: "Orders", path: "/orderhistory" },
   ];
 
   return (
@@ -46,7 +46,7 @@ function Button({ children, btn }) {
     >
       <Link to={btn}>{children}</Link>
       <animated.div
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#02f9ae] h-[2px]"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#89f9ea] h-[4px]"
         style={sidebarSpring}
       ></animated.div>
     </button>
