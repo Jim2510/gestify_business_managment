@@ -46,7 +46,7 @@ export function useAnimation() {
     width: window.matchMedia("(min-width: 1500px)").matches ? 250 : 160,
     height: window.matchMedia("(min-width: 1500px)").matches ? 250 : 160,
     config: { duration: 200 },
-    transform: isHover ? `scale(${1})` : `scale(${1.3})`,
+    transform: isHover ? `scale(${1})` : `scale(${1.5})`,
     zIndex: isHover ? 1 : 20,
   });
 

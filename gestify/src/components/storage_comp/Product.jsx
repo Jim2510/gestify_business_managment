@@ -6,7 +6,7 @@ export function Product({ product }) {
     const handleMouseLeave = () => setIsHover(true)
 
     return (
-        <animated.div style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="flex flex-col justify-around shadow-lg items-center rounded-2xl ml-[10px] mb-[15px] border-[3px] border-[#1E293B] bg-white">
+        <animated.div style={cardStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="flex flex-col justify-around shadow-xl items-center ml-[10px] mb-[15px] bg-white">
             <div className="w-[40%]"><img src={product.image} /></div>
             <div className="font-semibold">{product.name}</div>
             <div className="font-semibold flex flex-col">Stock <span className="text-[#1E293B] bg-[#02f9ae] rounded-md ">{product.stock_count}</span></div>
