@@ -1,33 +1,27 @@
 const dataPie = [
   {
-    id: "css",
-    label: "css",
-    value: 297,
-    color: "hsl(284, 70%, 50%)",
+    name: "Group A",
+    value: 400,
   },
   {
-    id: "elixir",
-    label: "elixir",
-    value: 28,
-    color: "hsl(265, 70%, 50%)",
+    name: "Group B",
+    value: 300,
   },
   {
-    id: "javascript",
-    label: "javascript",
-    value: 134,
-    color: "hsl(249, 70%, 50%)",
+    name: "Group C",
+    value: 300,
   },
   {
-    id: "python",
-    label: "python",
-    value: 32,
-    color: "hsl(267, 70%, 50%)",
+    name: "Group D",
+    value: 200,
   },
   {
-    id: "sass",
-    label: "sass",
-    value: 328,
-    color: "hsl(307, 70%, 50%)",
+    name: "Group E",
+    value: 278,
+  },
+  {
+    name: "Group F",
+    value: 189,
   },
 ];
 
