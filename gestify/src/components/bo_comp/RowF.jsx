@@ -28,7 +28,7 @@ export function RowF({ description, tot, number }) {
             {number}
           </div>
           <div className="text-center border-l-2 border-gray-400 col-span-1 border-b-2 flex items-center justify-center">
-            <input type="checkbox" />
+            <input type="checkbox" className="checked:bg-[#89f9ea] " />
           </div>
         </div>
       </div>
