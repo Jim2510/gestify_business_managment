@@ -24,16 +24,19 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <>
-      <div className="w-[100vw] h-full flex">
+      <div className="w-[100vw] min-h-[100vh] flex">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
           <Route path="/storage" element={<StorageLayout />} />
-          <Route path="/dashboard" element={
-            <ProtectedRoute>
-              <DashboardLayout />
-            </ProtectedRoute>
-          }>
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route path="tables" element={<DashboardTables />} />
             <Route path="expenditure" element={<DashboardX />} />
             <Route path="sales" element={<DashboardDs />} />

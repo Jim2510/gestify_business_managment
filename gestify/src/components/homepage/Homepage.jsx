@@ -6,8 +6,6 @@ import { GraphHomeSx } from "./GraphHomeSx";
 export function Homepage({ name }) {
   const { springs, springs2, springs3 } = useAnimation();
 
-
-
   return (
     <>
       <div className=" h-full flex justify-center items-center pt-10  z-20 flex-col dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-500 bg-white overflow-hidden">
@@ -44,17 +42,15 @@ export function Homepage({ name }) {
         </div>
 
         <div className="w-full h-full flex ">
-
           <div className="w-[40%] mt-10 flex flex-col justify-center items-center">
-          <h2 className="text-[24px] font-semibold">Goals</h2>
-           <GraphHomeSx />
+            <h2 className="text-[24px] font-semibold">Goals</h2>
+            <GraphHomeSx />
           </div>
 
           <div className="w-[900px] h-[400px] mt-10 flex flex-col justify-center items-center">
-          <h2 className="text-[24px] font-semibold">Daily Entries</h2>
-          <GraphHome/>
+            <h2 className="text-[24px] font-semibold">Daily Entries</h2>
+            <GraphHome />
           </div>
-
         </div>
       </div>
     </>
