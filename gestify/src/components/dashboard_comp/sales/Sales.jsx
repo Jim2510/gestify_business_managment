@@ -1,11 +1,13 @@
 import { TitleSection } from "../../standard_comp/TitleSection";
 import {
+  NivoBar,
   RAreaChart,
   RBarChart,
   RLineChart,
   RespRadBar,
 } from "../graphs/AllGraphs";
 import { FLineChart } from "./FLineChart";
+import { News } from "./News";
 import { ProgressionBar } from "./ProgressionBar";
 
 export function Sales() {
@@ -33,7 +35,7 @@ export function Sales() {
             </div>
           </div>
           <div className="col-span-1 h-[300px] shadow-2xl flex justify-center pt-5 bg-white relative">
-            <h2 className="font-semibold absolute">DATO 3</h2>
+            <h2 className="font-semibold absolute z-10">DATO 3</h2>
             <RBarChart />
           </div>
         </div>
@@ -45,15 +47,16 @@ export function Sales() {
                 <ProgressionBar comp={44} color={"#1cdafe"} pNum={2} />
                 <ProgressionBar comp={23} color={"#60aaff"} pNum={3} />
                 <ProgressionBar comp={87} color={"#65ffea"} pNum={4} />
-                <ProgressionBar comp={57} color={"#6596ff"} pNum={4} />
+                <ProgressionBar comp={57} color={"#6596ff"} pNum={5} />
               </div>
-              <div className=""></div>
-              <div className=""></div>
-              <div className=""></div>
             </div>
           </div>
-          <div className="col-span-2 bg-white h-[400px] text-[#6596ff] shadow-2xl"></div>
-          <div className="col-span-1 bg-white h-[400px] shadow-2xl"></div>
+          <div className="col-span-2 bg-white h-[400px] text-[#6596ff] shadow-2xl">
+            <NivoBar />
+          </div>
+          <div className="col-span-1 bg-white h-[400px] shadow-2xl">
+            <News earns={"+243"} />
+          </div>
         </div>
       </div>
     </>
