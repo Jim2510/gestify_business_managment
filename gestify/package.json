@@ -21,6 +21,7 @@
     "@nivo/marimekko": "^0.85.1",
     "@nivo/pie": "^0.85.1",
     "@nivo/radial-bar": "^0.85.1",
+    "@ramonak/react-progress-bar": "^5.2.0",
     "@react-spring/web": "^9.7.3",
     "@reduxjs/toolkit": "^2.2.3",
     "@syncfusion/ej2-react-schedule": "^25.1.39",
