@@ -1,50 +1,59 @@
+import { TitleSection } from "../../standard_comp/TitleSection";
 import {
-  MyResponsiveLine,
-  MyResponsiveMarimekko,
-  MyResponsivePie,
-  MyResponsivePie2,
+  RAreaChart,
+  RBarChart,
+  RLineChart,
+  RespRadBar,
 } from "../graphs/AllGraphs";
-import { TableSales } from "../graphs/TableSales";
+import { FLineChart } from "./FLineChart";
+import { ProgressionBar } from "./ProgressionBar";
 
 export function Sales() {
   return (
     <>
-      <div className="flex items-center justify-center w-full flex-col">
-        <h2 className="mt-[150px] text-center drop-shadow-lg shadow-black font-bold text-[40px] animate__backInDown animate__animated py-5">
-          DASHBOARD SALES
-        </h2>
-        <h2 className=" text-center font-bold text-[30px]">LABELS SALES</h2>
-        <div className="mt-[50px] w-[80%] h-[440px] overflow-y-hidden overflow-x-auto m-auto shadow-xl rounded-xl">
-          <div className="w-fit flex justify-center items-center">
-            <div className="">
-              <h2 className=" text-center font-bold">PIE 1</h2>
-              <div className="h-[390px] w-[400px] shadow-xl rounded-xl mx-10">
-                <MyResponsivePie />
-              </div>
-            </div>
-            <div className="">
-              <h2 className=" text-center font-bold">PIE 2</h2>
-              <div className="h-[390px] w-[500px] shadow-xl rounded-xl mx-10">
-                <MyResponsivePie2 />
-              </div>
-            </div>
-            <div className="">
-              <h2 className=" text-center font-bold">LINE</h2>
-              <div className="h-[390px] w-[600px] shadow-xl rounded-xl mx-10">
-                <MyResponsiveMarimekko />
-              </div>
+      <div className="flex items-center justify-center flex-col gap-4 w-[95%] mt-[150px]">
+        <TitleSection titleName={"DASHBOARD SALES"} />
+        <div className="grid grid-cols-4 px-4 gap-4 w-full">
+          <FLineChart collection={"COLLECTION 1"} earns={2045} />
+          <FLineChart collection={"COLLECTION 2"} earns={1355} />
+          <FLineChart collection={"COLLECTION 3"} earns={4045} />
+          <FLineChart collection={"COLLECTION 4"} earns={1045} />
+        </div>
+        <div className="grid grid-cols-4 px-4 gap-4 w-full">
+          <div className=" col-span-1 h-[300px] shadow-2xl justify-center items-center bg-white flex flex-col">
+            <h2 className="mt-[40px] font-semibold">DATO 1</h2>
+            <div className="mt-[-20px]">
+              <RespRadBar />
             </div>
           </div>
+          <div className="col-span-2 h-[300px] shadow-2xl flex justify-center pt-5 bg-white flex-col items-center gap-5">
+            <h2 className="font-semibold">DATO 2</h2>
+            <div className="">
+              <RLineChart />
+            </div>
+          </div>
+          <div className="col-span-1 h-[300px] shadow-2xl flex justify-center pt-5 bg-white relative">
+            <h2 className="font-semibold absolute">DATO 3</h2>
+            <RBarChart />
+          </div>
         </div>
-        <div className="w-[80%] h-[500px] mt-[100px] mb-[100px] flex justify-center items-center flex-col">
-          <h2 className=" text-center font-bold text-[30px] mb-5">
-            TABLE SALES
-          </h2>
-          <TableSales />
-        </div>
-        <div className="w-[80%] h-[500px] flex justify-center items-center flex-col">
-          <h2 className=" text-center font-bold text-[30px]">SECTORS SALES</h2>
-          <MyResponsiveLine />
+        <div className="grid grid-cols-4 px-4 gap-4 w-full">
+          <div className="col-span-1 bg-white h-[400px] shadow-2xl py-4">
+            <div className="flex justify-center">
+              <div className="p-5 w-[90%] flex flex-col gap-4 shadow-lg">
+                <ProgressionBar comp={92} color={"#02f9ae"} pNum={1} />
+                <ProgressionBar comp={44} color={"#1cdafe"} pNum={2} />
+                <ProgressionBar comp={23} color={"#60aaff"} pNum={3} />
+                <ProgressionBar comp={87} color={"#65ffea"} pNum={4} />
+                <ProgressionBar comp={57} color={"#6596ff"} pNum={4} />
+              </div>
+              <div className=""></div>
+              <div className=""></div>
+              <div className=""></div>
+            </div>
+          </div>
+          <div className="col-span-2 bg-white h-[400px] text-[#6596ff] shadow-2xl"></div>
+          <div className="col-span-1 bg-white h-[400px] shadow-2xl"></div>
         </div>
       </div>
     </>
