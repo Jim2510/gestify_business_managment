@@ -43,8 +43,8 @@ export function useAnimation() {
   });
 
   const cardStyle = useSpring({
-    width: window.matchMedia("(min-width: 1500px)").matches ? 250 : 160,
-    height: window.matchMedia("(min-width: 1500px)").matches ? 250 : 160,
+    width: window.matchMedia("(min-width: 1500px)").matches ? 180 : 160,
+    height: window.matchMedia("(min-width: 1500px)").matches ? 180 : 160,
     config: { duration: 200 },
     transform: isHover ? `scale(${1})` : `scale(${1.5})`,
     zIndex: isHover ? 1 : 20,
