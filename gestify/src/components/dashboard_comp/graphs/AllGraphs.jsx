@@ -1,4 +1,4 @@
-import { ResponsiveRadialBar } from "@nivo/radial-bar";
+import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
 import dataPie from "../../../data/dataPie";
 import {
@@ -17,6 +17,7 @@ import dataM from "../../../data/dataMarimekko";
 import datab from "../../../data/dataBar";
 import dataT from "../../../data/dataT";
 import dataBar from "../../../data/datab";
+import dataRPie from "../../../data/dataRPie";
 
 export function RespRadBar() {
   return (
@@ -240,6 +241,36 @@ export function NivoBar() {
         barAriaLabel={(e) =>
           e.id + ": " + e.formattedValue + " in country: " + e.indexValue
         }
+      />
+    </>
+  );
+}
+
+export function RespLine() {
+  return (
+    <>
+      <ResponsivePie
+        data={dataRPie}
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        activeOuterRadiusOffset={12}
+        colors={{ scheme: "blues" }}
+        borderWidth={2}
+        borderColor={{
+          from: "color",
+          modifiers: [["darker", "0.6"]],
+        }}
+        enableArcLinkLabels={false}
+        arcLinkLabelsTextOffset={9}
+        arcLinkLabelsTextColor="#333333"
+        arcLinkLabelsThickness={2}
+        arcLinkLabelsColor={{ from: "color" }}
+        arcLabelsRadiusOffset={0.65}
+        arcLabelsTextColor={{
+          from: "color",
+          modifiers: [["darker", "3"]],
+        }}
+        motionConfig="wobbly"
+        legends={[]}
       />
     </>
   );
