@@ -61,26 +61,30 @@ export function Sales() {
               </div>
             </div>
           </div>
-          <div className="col-span-2 bg-white h-[400px] text-[#6596ff] shadow-2xl">
+          <div className="col-span-2 bg-white h-[400px] text-[#02f9d8] shadow-2xl">
             <NivoBar />
           </div>
           <div className="col-span-1 bg-white h-[400px] shadow-2xl">
             <News />
           </div>
         </div>
-        <div className="grid grid-cols-4 px-4 pb-4 gap-4 w-full">
-          <div className="col-span-4 h-fit bg-white mt-4">
-            <Intst first={"Description"} second={"type"} third={"Date"} />
-            <div className="flex flex-col">
-              {documents &&
-                documents.map((el, index) => (
-                  <RowF
-                    description={el.name}
-                    tot={el.fileType}
-                    number={el.date}
-                    key={index}
-                  />
-                ))}
+        <div className="w-full px-4">
+          <div className="grid grid-cols-4 scrollbar gap-4 w-full h-[400px] overflow-auto my-4">
+            <div className="col-span-4 h-fit bg-white">
+              <div className="sticky top-0">
+                <Intst first={"Description"} second={"type"} third={"Date"} />
+              </div>
+              <div className="flex flex-col">
+                {documents &&
+                  documents.map((el, index) => (
+                    <RowF
+                      description={el.name}
+                      tot={el.fileType}
+                      number={el.date}
+                      key={index}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
         </div>
