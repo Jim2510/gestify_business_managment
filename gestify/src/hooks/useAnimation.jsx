@@ -39,7 +39,7 @@ export function useAnimation() {
   });
 
   const navSpring = useSpring({
-    width: userHidden ? 250 : 0,
+    width: userHidden ? 250 : -50,
   });
 
   const cardStyle = useSpring({
