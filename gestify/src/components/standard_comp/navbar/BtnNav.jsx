@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Btn() {
   const buttons = [
     { title: "Home", path: "/homepage" },
-    { title: "Dashboard", path: "/dashboard" },
+    { title: "Dashboard", path: "/dashboard/sales" },
     { title: "Events", path: "/scheduler/calendar" },
     { title: "BackOffice", path: "/backoffice" },
     { title: "Storage", path: "/storage" },

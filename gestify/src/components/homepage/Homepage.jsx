@@ -42,7 +42,7 @@ export function Homepage({ name }) {
         </div>
 
         <div className="w-full h-full flex justify-center items-center gap-5">
-          <div className="w-[40%] mt-10 flex flex-col justify-center items-center bg-white">
+          <div className="w-[40%] h-[400px] mt-10 flex flex-col justify-center items-center bg-white">
             <h2 className="text-[24px] font-semibold">Goals</h2>
             <GraphHomeSx />
           </div>
