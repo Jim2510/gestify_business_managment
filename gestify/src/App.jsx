@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { StorageLayout } from "./layout/StorageLayout";
 import { BackofficeLayout } from "./layout/BackofficeLayout";
 import { ActivitiesLayout } from "./layout/ActivitiesLayout";
+import { LandingPage } from "./pages/LandingPage";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -29,6 +30,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
           <Route path="/storage" element={<StorageLayout />} />
+          <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <DashboardLayout />
