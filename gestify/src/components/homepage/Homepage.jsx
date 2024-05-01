@@ -8,8 +8,8 @@ export function Homepage({ name }) {
 
   return (
     <>
-      <div className=" h-full flex justify-center items-center pt-10  z-20 flex-col dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-500 bg-white overflow-hidden">
-        <div className="z-20 p-4 sm:p-0 w-full sm:w-[100%] md:h-[250px] h-[230px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae] overflow-hidden relative">
+      <div className=" h-full flex justify-center items-center pt-10  z-20 flex-col dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-500 bg-transparent overflow-hidden">
+        <div className="z-20 p-4 sm:p-0 w-full sm:w-[100%] md:h-[250px] h-[230px] overflow-hidden relative">
           <animated.div
             style={springs3}
             className="absolute m-auto w-full text-white"
@@ -41,13 +41,13 @@ export function Homepage({ name }) {
           </div>
         </div>
 
-        <div className="w-full h-full flex ">
-          <div className="w-[40%] mt-10 flex flex-col justify-center items-center">
+        <div className="w-full h-full flex justify-center items-center gap-5">
+          <div className="w-[40%] h-[400px] mt-10 flex flex-col justify-center items-center bg-white">
             <h2 className="text-[24px] font-semibold">Goals</h2>
             <GraphHomeSx />
           </div>
 
-          <div className="w-[900px] h-[400px] mt-10 flex flex-col justify-center items-center">
+          <div className="w-[900px] h-[400px] mt-10 flex flex-col justify-center items-center bg-white">
             <h2 className="text-[24px] font-semibold">Daily Entries</h2>
             <GraphHome />
           </div>
