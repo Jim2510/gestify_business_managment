@@ -5,7 +5,7 @@ export function BtnSales() {
     <>
       <div className="mb-[16px] col-span-1 flex justify-center items-center text-[24px] w-full font-semibold ">
         <Link to={"/dashboard/sales"}>
-          <button className="w-fit border-4 bg-white hover:border-[#02f9ae] rounded-2xl px-4 flex justify-center items-center gap-4">
+          <button className="w-fit border-4 bg-white hover:border-[#02f9d8] rounded-2xl px-4 flex justify-center items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

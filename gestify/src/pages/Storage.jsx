@@ -120,7 +120,7 @@ export function Storage() {
               {numbers.map((n, i) => (
                 <li
                   key={i}
-                  className={`mr-[5px] text-[17px] font-medium px-[15px] py-[2px] rounded-full text-[#1E293B] ${
+                  className={`mr-[5px] text-[17px] font-medium px-[12px] py-[2px] rounded-full text-[#1E293B] justify-center items-center ${
                     currentPage === n ? "bg-[#02f9ae]" : ""
                   }`}
                 >
