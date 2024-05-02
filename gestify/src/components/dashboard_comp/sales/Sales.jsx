@@ -12,6 +12,7 @@ import { News } from "./News";
 import { ProgressionBar } from "./ProgressionBar";
 import documents from "../../../data/documents";
 import { RowF } from "../../bo_comp/RowF";
+import { BtnExp } from "./BtnExp";
 
 export function Sales() {
   return (
@@ -22,21 +23,7 @@ export function Sales() {
           <div className=" col-span-2">
             <TitleSection titleName={"DASHBOARD SALES"} />
           </div>
-          <div className="mb-[16px] col-span-1 flex justify-center items-center text-[24px] w-full font-semibold ">
-            <button className="w-fit border-4 bg-white hover:border-[#02f9ae] rounded-2xl px-4 flex justify-center items-center gap-4">
-              EXPENDITURES
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="bi bi-caret-right-fill"
-                viewBox="0 0 16 16"
-              >
-                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-              </svg>
-            </button>
-          </div>
+          <BtnExp />
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
           <FLineChart collection={"COLLECTION 1"} earns={2045} />
@@ -74,26 +61,30 @@ export function Sales() {
               </div>
             </div>
           </div>
-          <div className="col-span-2 bg-white h-[400px] text-[#6596ff] shadow-2xl">
+          <div className="col-span-2 bg-white h-[400px] text-[#02f9d8] shadow-2xl">
             <NivoBar />
           </div>
           <div className="col-span-1 bg-white h-[400px] shadow-2xl">
             <News />
           </div>
         </div>
-        <div className="grid grid-cols-4 px-4 gap-4 w-full">
-          <div className="col-span-4 h-fit bg-white">
-            <Intst first={"Description"} second={"type"} third={"Date"} />
-            <div className="flex flex-col">
-              {documents &&
-                documents.map((el, index) => (
-                  <RowF
-                    description={el.name}
-                    tot={el.fileType}
-                    number={el.date}
-                    key={index}
-                  />
-                ))}
+        <div className="w-full px-4">
+          <div className="grid grid-cols-4 scrollbar gap-4 w-full h-[400px] overflow-auto my-4">
+            <div className="col-span-4 h-fit bg-white">
+              <div className="sticky top-0">
+                <Intst first={"Description"} second={"type"} third={"Date"} />
+              </div>
+              <div className="flex flex-col">
+                {documents &&
+                  documents.map((el, index) => (
+                    <RowF
+                      description={el.name}
+                      tot={el.fileType}
+                      number={el.date}
+                      key={index}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
         </div>

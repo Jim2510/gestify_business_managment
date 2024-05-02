@@ -45,9 +45,9 @@ export function BaseBack() {
 
   return (
     <>
-      <div className="mt-[80px] h-full flex flex-col items-center ">
+      <div className="h-full flex flex-col items-center mt-[100px]">
         <TitleSection titleName={"BACK OFFICE"} />
-        <div className=" bg-transparent max-w-[85%] w-full h-[500px] flex justify-center items-start">
+        <div className=" bg-transparent max-w-[85%] mt-4 w-full h-[500px] flex justify-center items-start">
           <div className="w-[30%] bg-white h-fit shadow-2xl mr-4">
             <BtnBo arrBtn={arrBtn} handleBtnClick={handleBtnClick} />
           </div>
