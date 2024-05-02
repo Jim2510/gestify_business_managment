@@ -2,7 +2,6 @@ import { Intst } from "../../bo_comp/Ints";
 import { TitleSection } from "../../standard_comp/TitleSection";
 import {
   NivoBar,
-  RAreaChart,
   RBarChart,
   RLineChart,
   RespRadBar,
@@ -13,17 +12,20 @@ import { ProgressionBar } from "./ProgressionBar";
 import documents from "../../../data/documents";
 import { RowF } from "../../bo_comp/RowF";
 import { BtnExp } from "./BtnExp";
+import { BtnSales } from "./BtnSales";
 
 export function Sales() {
   return (
     <>
       <div className="flex items-center justify-center flex-col gap-4 w-[95%] mt-[100px] relative ">
         <div className="grid grid-cols-4 justify-center items-center gap-4">
-          <div className="col-span-1"></div>
+          <div className="col-span-1">
+            <BtnSales btnName={"TABLES"} link={"/dashboard/tables"} />
+          </div>
           <div className=" col-span-2">
             <TitleSection titleName={"DASHBOARD SALES"} />
           </div>
-          <BtnExp />
+          <BtnExp btnName={"EXPENDITURE"} link={"/dashboard/expenditure"} />
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
           <FLineChart collection={"COLLECTION 1"} earns={2045} />
