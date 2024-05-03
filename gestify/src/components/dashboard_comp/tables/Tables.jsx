@@ -6,8 +6,8 @@ import { BaseTable } from "./BaseTable";
 export function Tables() {
   return (
     <>
-      <div className="w-full flex flex-col mt-[100px] justify-center ">
-        <div className="grid grid-cols-4 justify-center items-center gap-4">
+      <div className="w-full h-full flex flex-col mt-[100px] justify-center">
+        <div className="grid grid-cols-4 justify-center items-center gap-4 ">
           <div className="col-span-1">
             <BtnSales btnName={"EXPENDITURE"} link={"/dashboard/expenditure"} />
           </div>
