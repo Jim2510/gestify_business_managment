@@ -8,6 +8,8 @@ const kpi = [
     UTP: 93,
     BS: 88,
     NC: 80,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-02",
@@ -18,6 +20,8 @@ const kpi = [
     UTP: 90,
     BS: 85,
     NC: 83,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-03",
@@ -28,6 +32,8 @@ const kpi = [
     UTP: 95,
     BS: 90,
     NC: 85,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-04",
@@ -38,6 +44,8 @@ const kpi = [
     UTP: 92,
     BS: 88,
     NC: 87,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-05",
@@ -48,6 +56,8 @@ const kpi = [
     UTP: 88,
     BS: 82,
     NC: 88,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-06",
@@ -58,6 +68,8 @@ const kpi = [
     UTP: 85,
     BS: 80,
     NC: 90,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-07",
@@ -68,6 +80,8 @@ const kpi = [
     UTP: 80,
     BS: 75,
     NC: 92,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-08",
@@ -78,6 +92,8 @@ const kpi = [
     UTP: 78,
     BS: 72,
     NC: 93,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-09",
@@ -88,6 +104,8 @@ const kpi = [
     UTP: 75,
     BS: 70,
     NC: 95,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-10",
@@ -98,6 +116,8 @@ const kpi = [
     UTP: 72,
     BS: 68,
     NC: 98,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-11",
@@ -108,6 +128,8 @@ const kpi = [
     UTP: 70,
     BS: 65,
     NC: 92,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-12",
@@ -118,6 +140,8 @@ const kpi = [
     UTP: 68,
     BS: 62,
     NC: 90,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-13",
@@ -128,6 +152,8 @@ const kpi = [
     UTP: 65,
     BS: 60,
     NC: 88,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-14",
@@ -138,6 +164,8 @@ const kpi = [
     UTP: 62,
     BS: 58,
     NC: 85,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-15",
@@ -148,6 +176,8 @@ const kpi = [
     UTP: 60,
     BS: 55,
     NC: 82,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-16",
@@ -158,6 +188,8 @@ const kpi = [
     UTP: 58,
     BS: 52,
     NC: 80,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-17",
@@ -168,6 +200,8 @@ const kpi = [
     UTP: 55,
     BS: 50,
     NC: 78,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-18",
@@ -178,6 +212,8 @@ const kpi = [
     UTP: 52,
     BS: 48,
     NC: 75,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-19",
@@ -188,6 +224,8 @@ const kpi = [
     UTP: 50,
     BS: 45,
     NC: 72,
+    CR: 22,
+    GMROI: 12,
   },
   {
     date: "2024-05-20",
@@ -198,6 +236,8 @@ const kpi = [
     UTP: 48,
     BS: 42,
     NC: 70,
+    CR: 22,
+    GMROI: 12,
   },
 ];
 
