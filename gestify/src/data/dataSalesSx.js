@@ -5,15 +5,15 @@ const dataSalesSx = [
       "data": [
         {
           "x": "Daily",
-          "y": 1
+          "y": 10
         },
         {
           "x": "Weekly",
-          "y": 6
+          "y": 16
         },
         {
           "x": "Monthly",
-          "y": 8
+          "y": 55
         }
       ]
     },
@@ -22,15 +22,15 @@ const dataSalesSx = [
       "data": [
         {
           "x": "Daily",
-          "y": 7
+          "y": 17
         },
         {
           "x": "Weekly",
-          "y": 3
+          "y": 23
         },
         {
           "x": "Monthly",
-          "y": 9
+          "y": 49
         }
       ]
     },
@@ -39,15 +39,15 @@ const dataSalesSx = [
       "data": [
         {
           "x": "Daily",
-          "y": 0
+          "y": 20
         },
         {
           "x": "Weekly",
-          "y": 4
+          "y": 30
         },
         {
           "x": "Monthly",
-          "y": 10
+          "y": 45
         }
       ]
     }

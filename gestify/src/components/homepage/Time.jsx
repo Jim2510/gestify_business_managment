@@ -11,12 +11,11 @@ export function Time() {
 
   return (
     <>
-      <h2 className="text-center text-[30px] font-bold p-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        {date.toLocaleDateString()}
+    <div className="flex justify-end">
+      <h2 className="text-center text-[20px] font-bold p-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+        {date.toLocaleDateString()} - {date.toLocaleTimeString()}
       </h2>
-      <h2 className="text-center text-[20px] font-bold pb-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        {date.toLocaleTimeString()}
-      </h2>
+    </div>
     </>
   );
 }
