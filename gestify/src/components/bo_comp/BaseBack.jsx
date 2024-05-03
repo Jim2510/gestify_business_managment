@@ -51,7 +51,7 @@ export function BaseBack() {
           <div className="w-[30%] bg-white h-fit shadow-2xl mr-4">
             <BtnBo arrBtn={arrBtn} handleBtnClick={handleBtnClick} />
           </div>
-          <div className="w-[70%] bg-white h-full shadow-2xl overflow-auto">
+          <div className="w-[70%] bg-white h-full shadow-2xl overflow-auto scrollbar">
             {renderComponent()}
           </div>
         </div>

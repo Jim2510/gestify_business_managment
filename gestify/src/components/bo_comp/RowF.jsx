@@ -1,8 +1,8 @@
 export function RowF({ description, tot, number }) {
   return (
     <>
-      <div className="w-full h-full px-1 text-[13px]">
-        <div className="grid grid-cols-12 grid-rows-1 justify-between">
+      <div className="w-full h-full px-1 text-[13px] ">
+        <div className="grid grid-cols-12 grid-rows-1 justify-between ">
           <div className=" p-2 text-center border-gray-400 flex justify-center items-center col-span-1 border-b-2">
             <a href="">
               <svg

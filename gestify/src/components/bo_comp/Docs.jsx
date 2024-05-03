@@ -7,7 +7,7 @@ const docTable = ["Name", "File", "Date"];
 export function Docs() {
   return (
     <>
-      <div className="relative">
+      <div className="relative scrollbar">
         <div className=" sticky top-0 bg-white ">
           <Intst first={docTable[0]} second={docTable[1]} third={docTable[2]} />
         </div>
