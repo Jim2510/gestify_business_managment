@@ -31,11 +31,10 @@ export function Sidebar() {
     <>
       <animated.div
         style={sidebarSpring}
-        className="w-full md:w-[300px] h-full shadow-2xl sidebar fixed flex flex-col dark:bg-slate-800 bg-white transition-transform duration-500 ease-in-out transform translate-x-0 z-[250] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
+        className="w-full md:w-[280px] h-full top-0 shadow-2xl sidebar fixed flex flex-col dark:bg-slate-800 bg-white transition-transform duration-500 ease-in-out transform translate-x-0 z-[250] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
         id="sidebar"
       >
         <LabelUser />
-        {/* <InfoButton /> */}
         <MenuSidebar />
         <animated.div
           style={btnSidebar}

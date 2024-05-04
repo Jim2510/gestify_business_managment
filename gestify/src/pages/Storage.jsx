@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Product } from "../components/storage_comp/Product";
 import { useSelector } from "react-redux";
 import { TitleSection } from "../components/standard_comp/TitleSection";
+import { Time } from "../components/homepage/Time";
 
 export function Storage() {
   const prods = useSelector((state) => state.prods.value);
@@ -55,8 +56,7 @@ export function Storage() {
   };
 
   return (
-    <div
-      className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center mt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
+    <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
       onClick={() => setToggleSearchBar(false)}
     >
       <TitleSection titleName="STORAGE" />
@@ -120,7 +120,7 @@ export function Storage() {
               {numbers.map((n, i) => (
                 <li
                   key={i}
-                  className={`mr-[5px] text-[17px] font-medium px-[15px] py-[2px] rounded-full text-[#1E293B] ${
+                  className={`mr-[5px] text-[17px] font-medium px-[12px] py-[2px] rounded-full text-[#1E293B] justify-center items-center ${
                     currentPage === n ? "bg-[#02f9ae]" : ""
                   }`}
                 >

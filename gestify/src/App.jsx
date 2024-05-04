@@ -12,6 +12,7 @@ import { StorageLayout } from "./layout/StorageLayout";
 import { BackofficeLayout } from "./layout/BackofficeLayout";
 import { ActivitiesLayout } from "./layout/ActivitiesLayout";
 import { SchedulerLayout } from "./layout/SchedulerLayout";
+import { LandingPage } from "./pages/LandingPage";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -31,14 +32,12 @@ function App() {
           <Route path="/homepage" element={<Home />} />
           <Route path="/storage" element={<StorageLayout />} />
           <Route path="/scheduler/calendar" element={<SchedulerLayout />} />
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardLayout />
-              </ProtectedRoute>
-            }
-          >
+          <Route path="/landingpage" element={<LandingPage />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <DashboardLayout />
+            </ProtectedRoute>
+          }>
             <Route path="tables" element={<DashboardTables />} />
             <Route path="expenditure" element={<DashboardX />} />
             <Route path="sales" element={<DashboardDs />} />

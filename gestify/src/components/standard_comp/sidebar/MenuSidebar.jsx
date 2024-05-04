@@ -19,7 +19,7 @@ export function MenuSidebar() {
             arrbtn.map((el, index) => (
               <div
                 key={index}
-                className="p-2 shadow-2xl cursor-pointer bg-white flex justify-start items-center"
+                className="p-2 shadow-2xl cursor-pointer bg-white/40 flex justify-start items-center hover:bg-white active:bg-white/40"
               >
                 <img width={20} height={20} src={el.src} alt="" />
                 <h2 className="pl-4">{el.name}</h2>
