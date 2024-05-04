@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Product } from "../components/storage_comp/Product";
 import { useSelector } from "react-redux";
 import { TitleSection } from "../components/standard_comp/TitleSection";
+import { Time } from "../components/homepage/Time";
 
 export function Storage() {
   const prods = useSelector((state) => state.prods.value);

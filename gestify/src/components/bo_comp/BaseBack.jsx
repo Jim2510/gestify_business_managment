@@ -4,6 +4,7 @@ import { BtnBo } from "./BtnBo";
 import { ListBo } from "./ListBo";
 import { Customers } from "./Customers";
 import { Docs } from "./Docs";
+import { Time } from "../homepage/Time";
 
 const arrBtn = ["Clienti", "Documenti", "Fatture"];
 

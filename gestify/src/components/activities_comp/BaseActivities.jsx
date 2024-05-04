@@ -1,3 +1,4 @@
+import { Time } from "../homepage/Time";
 import { TitleSection } from "../standard_comp/TitleSection";
 import { TableActivities } from "./TableActivities";
 
