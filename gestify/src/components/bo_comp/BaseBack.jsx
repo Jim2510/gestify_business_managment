@@ -4,6 +4,7 @@ import { BtnBo } from "./BtnBo";
 import { ListBo } from "./ListBo";
 import { Customers } from "./Customers";
 import { Docs } from "./Docs";
+import { Time } from "../homepage/Time";
 
 const arrBtn = ["Clienti", "Documenti", "Fatture"];
 
@@ -45,7 +46,7 @@ export function BaseBack() {
 
   return (
     <>
-      <div className="h-full flex flex-col items-center mt-[100px]">
+      <div className="h-full flex flex-col items-center mt-[70px]">
         <TitleSection titleName={"BACK OFFICE"} />
         <div className=" bg-transparent max-w-[85%] mt-4 w-full h-[500px] flex justify-center items-start">
           <div className="w-[30%] bg-white h-fit shadow-2xl mr-4">
