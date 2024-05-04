@@ -1,448 +1,277 @@
 import { ResponsivePie } from "@nivo/pie";
-import dataLine from "../../../data/dataLine";
+import { ResponsiveBar } from "@nivo/bar";
 import dataPie from "../../../data/dataPie";
+import {
+  Area,
+  AreaChart,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Pie,
+  PieChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import dataM from "../../../data/dataMarimekko";
-import { ResponsiveMarimekko } from "@nivo/marimekko";
-import { ResponsiveLine } from "@nivo/line";
-export function MyResponsivePie({}) {
+import datab from "../../../data/dataBar";
+import dataT from "../../../data/dataT";
+import dataBar from "../../../data/datab";
+import dataRPie from "../../../data/dataRPie";
+
+export function RespRadBar() {
   return (
-    <ResponsivePie
-      data={dataPie}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-      innerRadius={0.5}
-      padAngle={4}
-      cornerRadius={0}
-      activeOuterRadiusOffset={0}
-      borderWidth={3}
-      borderColor={{
-        from: "color",
-        modifiers: [["darker", 0.2]],
-      }}
-      arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor="#333333"
-      arcLinkLabelsThickness={2}
-      arcLinkLabelsColor={{ from: "color" }}
-      arcLabelsSkipAngle={10}
-      arcLabelsTextColor={{
-        from: "color",
-        modifiers: [["darker", 2]],
-      }}
-      defs={[
-        {
-          id: "dots",
-          type: "patternDots",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          size: 4,
-          padding: 1,
-          stagger: true,
-        },
-        {
-          id: "lines",
-          type: "patternLines",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: "ruby",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "c",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "go",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "python",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "scala",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "lisp",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "elixir",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "javascript",
-          },
-          id: "lines",
-        },
-      ]}
-      legends={[
-        {
-          anchor: "bottom",
-          direction: "row",
-          justify: false,
-          translateX: 25,
-          translateY: 56,
-          itemsSpacing: -10,
-          itemWidth: 80,
-          itemHeight: 18,
-          itemTextColor: "#999",
-          itemDirection: "left-to-right",
-          itemOpacity: 1,
-          symbolSize: 12,
-          symbolShape: "circle",
-          effects: [
-            {
-              on: "hover",
-              style: {
-                itemTextColor: "#000",
-              },
-            },
-          ],
-        },
-      ]}
-    />
+    <>
+      <PieChart width={330} height={300}>
+        <Pie
+          data={dataPie}
+          dataKey="value"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          outerRadius={50}
+          fill="#02f9ae"
+        />
+        <Pie
+          data={dataPie}
+          dataKey="value"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          innerRadius={60}
+          outerRadius={80}
+          fill="#60aaff"
+          label
+        />
+      </PieChart>
+    </>
   );
 }
 
-export function MyResponsivePie2() {
+export function RLineChart() {
   return (
-    <ResponsivePie
-      data={dataPie}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-      startAngle={-90}
-      endAngle={90}
-      innerRadius={0.45}
-      padAngle={1}
-      activeOuterRadiusOffset={15}
-      colors={{ scheme: "yellow_green_blue" }}
-      borderWidth={2}
-      borderColor={{
-        from: "color",
-        modifiers: [["darker", "1.3"]],
-      }}
-      arcLinkLabelsTextOffset={2}
-      arcLinkLabelsTextColor="#333333"
-      arcLinkLabelsOffset={2}
-      arcLinkLabelsDiagonalLength={15}
-      arcLinkLabelsStraightLength={17}
-      arcLinkLabelsColor={{ from: "color" }}
-      arcLabelsTextColor={{
-        from: "color",
-        modifiers: [["darker", "3"]],
-      }}
-      defs={[
-        {
-          id: "dots",
-          type: "patternDots",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          size: 4,
-          padding: 1,
-          stagger: true,
-        },
-        {
-          id: "lines",
-          type: "patternLines",
-          background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: "ruby",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "c",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "go",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "python",
-          },
-          id: "dots",
-        },
-        {
-          match: {
-            id: "scala",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "lisp",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "elixir",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "javascript",
-          },
-          id: "lines",
-        },
-      ]}
-      motionConfig="wobbly"
-      transitionMode="endAngle"
-      legends={[
-        {
-          anchor: "bottom",
-          direction: "row",
-          justify: false,
-          translateX: 25,
-          translateY: 56,
-          itemsSpacing: 0,
-          itemWidth: 100,
-          itemHeight: 18,
-          itemTextColor: "#999",
-          itemDirection: "left-to-right",
-          itemOpacity: 1,
-          symbolSize: 18,
-          symbolShape: "circle",
-          effects: [
-            {
-              on: "hover",
-              style: {
-                itemTextColor: "#000",
-              },
-            },
-          ],
-        },
-      ]}
-    />
+    <>
+      <AreaChart
+        width={650}
+        height={230}
+        data={dataM}
+        margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
+      >
+        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#02f9ae" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#02f9ae" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#1cdafe" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#1cdafe" stopOpacity={0} />
+          </linearGradient>
+        </defs>
+        <XAxis fontSize={12} dataKey="name" />
+        <YAxis fontSize={12} />
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <Area
+          type="monotone"
+          dataKey="uv"
+          stroke="#02f9ae"
+          fillOpacity={1}
+          fill="url(#colorUv)"
+        />
+        <Area
+          type="monotone"
+          dataKey="pv"
+          stroke="#1cdafe"
+          fillOpacity={1}
+          fill="url(#colorPv)"
+        />
+      </AreaChart>
+    </>
   );
 }
 
-export function MyResponsiveMarimekko() {
+export function RBarChart() {
   return (
-    <ResponsiveMarimekko
-      data={dataM}
-      id="statement"
-      value="participation"
-      dimensions={[
-        {
-          id: "disagree strongly",
-          value: "stronglyDisagree",
-        },
-        {
-          id: "disagree",
-          value: "disagree",
-        },
-        {
-          id: "agree",
-          value: "agree",
-        },
-        {
-          id: "agree strongly",
-          value: "stronglyAgree",
-        },
-      ]}
-      outerPadding={20}
-      innerPadding={20}
-      axisTop={null}
-      axisRight={{
-        orient: "right",
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: "",
-        legendOffset: 0,
-        truncateTickAt: 0,
-      }}
-      axisBottom={{
-        orient: "bottom",
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: "participation",
-        legendOffset: 36,
-        legendPosition: "middle",
-        truncateTickAt: 0,
-      }}
-      axisLeft={{
-        orient: "left",
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: "opinions",
-        legendOffset: -40,
-        legendPosition: "middle",
-        truncateTickAt: 0,
-      }}
-      margin={{ top: 40, right: 80, bottom: 100, left: 80 }}
-      colors={{ scheme: "yellow_green_blue" }}
-      borderWidth={1}
-      borderColor={{
-        from: "color",
-        modifiers: [["darker", "3"]],
-      }}
-      defs={[
-        {
-          id: "lines",
-          type: "patternLines",
-          background: "rgba(0, 0, 0, 0)",
-          color: "inherit",
-          rotation: -45,
-          lineWidth: 4,
-          spacing: 8,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: "agree strongly",
-          },
-          id: "lines",
-        },
-        {
-          match: {
-            id: "disagree strongly",
-          },
-          id: "lines",
-        },
-      ]}
-      legends={[
-        {
-          anchor: "bottom",
-          direction: "row",
-          justify: false,
-          translateX: 0,
-          translateY: 80,
-          itemsSpacing: 0,
-          itemWidth: 116,
-          itemHeight: 21,
-          itemTextColor: "#999",
-          itemDirection: "right-to-left",
-          itemOpacity: 1,
-          symbolSize: 13,
-          symbolShape: "square",
-          effects: [
-            {
-              on: "hover",
-              style: {
-                itemTextColor: "#000",
-              },
-            },
-          ],
-        },
-      ]}
-    />
+    <>
+      <BarChart
+        width={350}
+        height={300}
+        data={datab}
+        margin={{ right: 15, bottom: 20 }}
+      >
+        <XAxis fontSize={12} dataKey="name" />
+        <YAxis fontSize={12} />
+        <Tooltip />
+        <Bar dataKey="pv" fill="#02f9ae" />
+        <Bar dataKey="uv" fill="#60aaff" />
+      </BarChart>
+    </>
   );
 }
 
-export function MyResponsiveLine() {
+export function RAreaChart() {
   return (
-    <ResponsiveLine
-      data={dataLine}
-      margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-      xScale={{ type: "point" }}
-      yScale={{
-        type: "linear",
-        min: "auto",
-        max: "auto",
-        stacked: true,
-        reverse: false,
-      }}
-      yFormat=" >-.2f"
-      axisTop={null}
-      axisRight={null}
-      axisBottom={{
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: "transportation",
-        legendOffset: 36,
-        legendPosition: "middle",
-        truncateTickAt: 0,
-      }}
-      axisLeft={{
-        tickSize: 5,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: "count",
-        legendOffset: -40,
-        legendPosition: "middle",
-        truncateTickAt: 0,
-      }}
-      enableGridX={false}
-      colors={{ scheme: "yellow_green" }}
-      lineWidth={3}
-      pointSize={10}
-      pointColor={{ theme: "background" }}
-      pointBorderWidth={2}
-      pointBorderColor={{ from: "serieColor" }}
-      pointLabelYOffset={-12}
-      enableArea={true}
-      areaBlendMode="multiply"
-      areaOpacity={0.6}
-      enableTouchCrosshair={true}
-      useMesh={true}
-      legends={[
-        {
-          anchor: "bottom-right",
-          direction: "column",
-          justify: false,
-          translateX: 100,
-          translateY: 0,
-          itemsSpacing: 0,
-          itemDirection: "left-to-right",
-          itemWidth: 80,
-          itemHeight: 20,
-          itemOpacity: 0.75,
-          symbolSize: 12,
-          symbolShape: "circle",
-          symbolBorderColor: "rgba(0, 0, 0, .5)",
-          effects: [
-            {
-              on: "hover",
-              style: {
-                itemBackground: "rgba(0, 0, 0, .03)",
-                itemOpacity: 1,
-              },
+    <>
+      <AreaChart
+        width={200}
+        height={80}
+        data={dataT}
+        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+      >
+        <XAxis
+          padding={"gap"}
+          fontSize={10}
+          height={20}
+          tickCount={1}
+          tickLine={false}
+          tickSize={3}
+        />
+        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#1cdafe" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#1cdafe" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#02f9ae" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#02f9ae" stopOpacity={0} />
+          </linearGradient>
+        </defs>
+        <Tooltip />
+        <Area
+          type="monotone"
+          dataKey="uv"
+          stroke="#1cdafe"
+          fillOpacity={1}
+          fill="url(#colorUv)"
+        />
+        <Area
+          type="monotone"
+          dataKey="pv"
+          stroke="#02f9ae"
+          fillOpacity={1}
+          fill="url(#colorPv)"
+        />
+      </AreaChart>
+    </>
+  );
+}
+
+export function NivoBar() {
+  return (
+    <>
+      <ResponsiveBar
+        data={dataBar}
+        keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
+        indexBy="country"
+        margin={{ top: 50, right: 0, bottom: 50, left: 50 }}
+        padding={0.3}
+        groupMode="grouped"
+        valueScale={{ type: "linear" }}
+        indexScale={{ type: "band", round: true }}
+        colors={{ scheme: "blues" }}
+        defs={[
+          {
+            id: "dots",
+            type: "patternDots",
+            background: "inherit",
+            color: "#38bcb2",
+            size: 4,
+            padding: 1,
+            stagger: true,
+          },
+          {
+            id: "lines",
+            type: "patternLines",
+            background: "inherit",
+            color: "#eed312",
+            rotation: -45,
+            lineWidth: 6,
+            spacing: 10,
+          },
+        ]}
+        fill={[
+          {
+            match: {
+              id: "fries",
             },
-          ],
-        },
-      ]}
-    />
+            id: "dots",
+          },
+          {
+            match: {
+              id: "sandwich",
+            },
+            id: "lines",
+          },
+        ]}
+        borderWidth={1}
+        borderColor={{
+          from: "color",
+          modifiers: [["darker", 1.6]],
+        }}
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: "country",
+          legendPosition: "middle",
+          legendOffset: 32,
+          truncateTickAt: 0,
+        }}
+        axisLeft={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: "food",
+          legendPosition: "middle",
+          legendOffset: -40,
+          truncateTickAt: 0,
+        }}
+        enableLabel={false}
+        labelSkipWidth={12}
+        labelSkipHeight={12}
+        labelTextColor={{
+          from: "color",
+          modifiers: [["darker", 1.6]],
+        }}
+        legends={[]}
+        role="application"
+        ariaLabel="Nivo bar chart demo"
+        barAriaLabel={(e) =>
+          e.id + ": " + e.formattedValue + " in country: " + e.indexValue
+        }
+      />
+    </>
+  );
+}
+
+export function RespLine() {
+  return (
+    <>
+      <ResponsivePie
+        data={dataRPie}
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        activeOuterRadiusOffset={12}
+        colors={{ scheme: "blues" }}
+        borderWidth={2}
+        borderColor={{
+          from: "color",
+          modifiers: [["darker", "0.6"]],
+        }}
+        enableArcLinkLabels={false}
+        arcLinkLabelsTextOffset={9}
+        arcLinkLabelsTextColor="#333333"
+        arcLinkLabelsThickness={2}
+        arcLinkLabelsColor={{ from: "color" }}
+        arcLabelsRadiusOffset={0.65}
+        arcLabelsTextColor={{
+          from: "color",
+          modifiers: [["darker", "3"]],
+        }}
+        motionConfig="wobbly"
+        legends={[]}
+      />
+    </>
   );
 }

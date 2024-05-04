@@ -24,21 +24,22 @@ export function Sidebar() {
     transform: isOpen
       ? "translateX(-100%) rotate(180deg)"
       : "translateX(0%) rotate(0deg)",
+    delay: 1000,
   });
+
   return (
     <>
       <animated.div
         style={sidebarSpring}
-        className="min-w-[330px] md:w-[25%] w-full h-full shadow-2xl sidebar fixed flex flex-col dark:bg-slate-800 bg-white transition-transform duration-500 ease-in-out transform translate-x-0 z-[250]"
+        className="w-full md:w-[300px] h-full shadow-2xl sidebar fixed flex flex-col dark:bg-slate-800 bg-white transition-transform duration-500 ease-in-out transform translate-x-0 z-[250] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
         id="sidebar"
       >
         <LabelUser />
-        <InfoButton />
-        <div className="border-b"></div>
+        {/* <InfoButton /> */}
         <MenuSidebar />
         <animated.div
           style={btnSidebar}
-          className="dark:bg-slate-800 dark:text-white transition-colors ease-in delay-200 hover:text-[#02f9ae] w-[30px] border-black fixed translate-y-1/2 -right-7 top-[50%] flex justify-center items-center bg-white p-2 rounded-r-2xl shadow-2xl"
+          className="dark:bg-slate-800 dark:text-white transition-colors ease-in delay-200 hover:text-[#02f9ae] w-[30px] border-black fixed translate-y-1/2 -right-7 top-[50%] flex justify-center items-center bg-transparent p-2 rounded-r-2xl shadow-2xl"
         >
           <button
             onClick={() => {
@@ -50,8 +51,8 @@ export function Sidebar() {
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="currentColor"
-              class="bi bi-caret-right-fill"
+              fillRule="currentColor"
+              className="bi bi-caret-right-fill"
               viewBox="0 0 16 16"
             >
               <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />

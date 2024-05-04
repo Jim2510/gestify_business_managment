@@ -25,7 +25,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <>
-      <div className="w-[100vw] h-full flex">
+      <div className="w-[100vw] min-h-[100vh] flex">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
@@ -73,7 +73,7 @@ function App() {
           <Route path="/scheduler" element={<SchedulerLayout />}>
             <Route path="calendar" element={<Calendar />} />
           </Route> */}
-          <Route path="activities" element={<ActivitiesLayout />} />
+          <Route path="/orderhistory" element={<ActivitiesLayout />} />
         </Routes>
       </div>
     </>

@@ -5,7 +5,7 @@ import { Homepage } from "../components/homepage/Homepage";
 export function Home({ children }) {
   return (
     <>
-      <div className="w-full h-full">
+      <div className="w-full h-full bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]">
         <Sidebar />
         <Navbar />
         <Homepage />

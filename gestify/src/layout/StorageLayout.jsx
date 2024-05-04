@@ -9,7 +9,6 @@ export function StorageLayout() {
             <div className="w-full h-full">
                 <Sidebar />
                 <Navbar />
-                <NavDash />
                 <Storage />
             </div>
         </>
