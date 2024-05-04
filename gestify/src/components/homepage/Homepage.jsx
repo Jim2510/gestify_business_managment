@@ -8,8 +8,8 @@ export function Homepage({ name = 'Tega' }) {
 
   return (
     <>
-      <div className=" h-full flex justify-center items-center pt-10  z-20 flex-col dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-500 bg-transparent overflow-hidden">
-        <div className="z-20 p-4 sm:p-0 w-full sm:w-[100%] md:h-[250px] h-[230px] overflow-hidden relative ">
+      <div className="h-full mt-[-33px] flex justify-center items-center pt-10  z-20 flex-col dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-500 bg-transparent overflow-hidden">
+        <div className=" z-20 p-4 sm:p-0 w-full sm:w-[100%] md:h-[250px] h-[230px] overflow-hidden relative ">
           <div className="flex relative w-full z-10 pt-8">
             <animated.div style={springs} className="w-[100%] mt-20 ">
               <p className="text-white mt-[-30px] font-extrabold pl-16 text-[60px] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">

@@ -56,8 +56,7 @@ export function Storage() {
   };
 
   return (
-    <div
-      className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center mt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
+    <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
       onClick={() => setToggleSearchBar(false)}
     >
       <TitleSection titleName="STORAGE" />
