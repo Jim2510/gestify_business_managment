@@ -1,7 +1,7 @@
 export function FormF() {
   return (
     <>
-      <div className="w-full pt-16 p-10">
+      <div className="w-full pt-16 p-10 ">
         <form className="grid grid-cols-2 justify-between gap-5">
           <label>Codice</label>
           <input type="text" />

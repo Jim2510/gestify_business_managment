@@ -22,7 +22,7 @@ export function Navbar() {
           <div className="w-full justify-start flex">
             <div className="w-[200px] overflow-hidden h-[35px]">
               <img
-                src="..\src\assets\gestify_1.png"
+                src="..\src\assets\gestify__1_-removebg-preview_1.png"
                 alt=""
                 className="min-w-[200px] relative top-[-80px]"
               />
@@ -40,7 +40,7 @@ export function Navbar() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="18"
-                fill="black"
+                fillRule="black"
                 className="bi bi-menu-button"
                 viewBox="0 0 16 16"
               >

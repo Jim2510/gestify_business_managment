@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 function Btn() {
   const buttons = [
-    { title: "Home", path: "/homepage" },
-    { title: "Dashboard", path: "/dashboard/sales" },
-    { title: "Events", path: "/scheduler/calendar" },
-    { title: "BackOffice", path: "/backoffice" },
-    { title: "Storage", path: "/storage" },
-    { title: "Orders", path: "/orderhistory" },
+    { title: "HOME", path: "/homepage" },
+    { title: "DASHBOARD", path: "/dashboard/sales" },
+    { title: "EVENTS", path: "/scheduler/calendar" },
+    { title: "BACKOFFICE", path: "/backoffice" },
+    { title: "STORAGE", path: "/storage" },
+    { title: "ORDERS", path: "/orderhistory" },
   ];
 
   return (
@@ -57,11 +57,6 @@ export function BtnNav() {
   return (
     <>
       <div className="font-semibold px-4 md:flex hidden justify-center items-center">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-[200px] min-w-100px rounded-xl px-5 border-2 focus:ring-green-500 focus:border-[#02f9ae] focus:ring-1 focus:outline-none border-gray-400 mr-2 h-8"
-        />
         <Btn />
       </div>
     </>

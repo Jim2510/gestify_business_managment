@@ -24,7 +24,7 @@ export function GraphHome() {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'transportation',
+            legend: 'working hours',
             legendOffset: 36,
             legendPosition: 'middle',
             truncateTickAt: 0
@@ -33,7 +33,7 @@ export function GraphHome() {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'count',
+            legend: 'income',
             legendOffset: -40,
             legendPosition: 'middle',
             truncateTickAt: 0

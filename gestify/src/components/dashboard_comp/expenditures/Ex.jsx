@@ -6,6 +6,7 @@ import { getTheme } from "@table-library/react-table-library/baseline";
 import { TitleSection } from "../../standard_comp/TitleSection";
 import { BtnSales } from "../sales/BtnSales";
 import { ExpDep } from "../sales/ExpDev";
+import { BtnExp } from "../sales/BtnExp";
 
 export function Ex() {
   let data = {
@@ -32,12 +33,14 @@ export function Ex() {
       <div className="w-full mt-[100px] px-5 flex flex-col justify-center h-full items-center">
         <div className="grid grid-cols-5 justify-center items-center gap-4">
           <div className="col-span-1">
-            <BtnSales />
+            <BtnSales btnName={"SALES"} link={"/dashboard/sales"} />
           </div>
           <div className=" col-span-3">
             <TitleSection titleName={"DASHBOARD EXPENDITURES"} />
           </div>
-          <div className="col-span-1"></div>
+          <div className="col-span-1">
+            <BtnExp btnName={"TABLES"} link={"/dashboard/tables"} />
+          </div>
         </div>
         <div className="w-full grid grid-cols-1 grid-rows-3 gap-4 p-2 justify-center items-center">
           <ExpDep />
