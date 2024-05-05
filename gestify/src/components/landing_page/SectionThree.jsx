@@ -1,18 +1,13 @@
 export function SectionThree() {
     return <>
-    <div className="flex justify-center w-[100vw] h-[100vh] items-center ">
-    <div className="w-[95%] h-[500px] shadow-2xl" >
-        <div className='flex flex-col' >
-            <div className='w-[400px] h-[200px] overflow-hidden' >
-                <img className='' src='' alt="" />
-            </div>
-            <div className="w-[400px] flex justify-center flex-col items-center">
-                {/* <h1>Gestify</h1>
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p> */}
-                <button className='rounded-full w-[200px] bg-white/40 shadow-2xl py-2 hover:bg-white/70 active:bg-white/40' >ISCRIVITI</button>
-            </div>
+    <div className="w-full h-full flex justify-center items-center mt-[200px] ">
+        <div className="flex justify-center items-center gap-4 w-[95%] h-[500px]" >
+        <div className="w-[50%]" >
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit tempus lorem, in iaculis enim mollis nec. Donec scelerisque enim id quam maximus condimentum. Proin quis ex in nunc tristique interdum. Morbi mauris ante, porta at mattis sit amet, lobortis sed turpis. Donec auctor nisi non nisi tempus, ut venenatis libero maximus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit tempus lorem, in iaculis enim mollis nec. Donec scelerisque enim id quam maximus condimentum. Proin quis ex in nunc tristique interdum. Morbi mauris ante, porta at mattis sit amet, lobortis sed turpis. Donec auctor nisi non nisi tempus, ut venenatis libero maximus. Nullam dictum interdum leo, sit amet aliquam libero suscipit sit amet. Aliquam erat volutpat. Vivamus nec tempor mauris, non tempor sapien. Etiam vulputate neque sit amet justo laoreet, sed consectetur diam ornare. Curabitur gravida augue nisl, at auctor magna cursus sit amet. Nunc eros erat, sollicitudin eget orci sit amet, convallis fermentum metus. Nulla faucibus sagittis quam sed aliquet. Morbi facilisis tortor id quam fringilla viverra.. </h3>
         </div>
-        <div>
+        <div className="w-[700px]" >
+            <img src="" alt="" />
+            <img src="" alt="" />
             <img src="" alt="" />
         </div>
     </div>
