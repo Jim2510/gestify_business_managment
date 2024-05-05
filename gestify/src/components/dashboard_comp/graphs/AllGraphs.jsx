@@ -252,7 +252,7 @@ export function RespLine() {
       <ResponsivePie
         data={dataRPie}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        activeOuterRadiusOffset={12}
+        // activeOuterRadiusOffset={12}
         colors={{ scheme: "blues" }}
         borderWidth={2}
         borderColor={{

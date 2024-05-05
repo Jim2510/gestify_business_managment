@@ -53,7 +53,7 @@ export function Sales() {
             <RBarChart />
           </div>
         </div>
-        <div className="grid grid-cols-4 px-4 gap-4 w-full">
+        <div className="grid grid-cols-4 px-4 gap-4 w-full relative">
           <div className="col-span-1 bg-white h-[400px] shadow-2xl py-4">
             <div className="flex justify-center">
               <div className="p-5 w-[90%] flex flex-col gap-4 shadow-lg">
