@@ -66,7 +66,7 @@ export function Scheduler() {
               </button>
             </div>
           </div>
-          <div className="grid justify-items-center items-center border p-0"></div>
+          <div className="grid justify-items-center items-center border p-0 sticky top-[40px] bg-white"></div>
           {currentWeek.map((day, index) => (
             <div
               key={index}
