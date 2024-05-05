@@ -48,10 +48,10 @@ export function Scheduler() {
       <TitleSection titleName="CALENDAR" />
       <div className="w-[85%] h-[75%] overflow-y-auto mt-4">
         <div className="grid grid-cols-8 grid-rows-26 w-full h-fit shadow-lg rounded-md bg-white relative font-semibold">
-          <div className="col-span-full bg-gray-200 flex justify-between sticky top-0 z-20 pl-4">
+          <div className="col-span-full bg-gray-200 flex justify-between sticky top-0 z-20">
             <input
               type="date"
-              className="border-none bg-transparent"
+              className="border-none bg-transparent focus:ring-0 focus:border-0"
               value={currentDate.toISOString().split("T")[0]}
             ></input>
             <div className="flex justify-center items-center">
@@ -70,7 +70,7 @@ export function Scheduler() {
           {currentWeek.map((day, index) => (
             <div
               key={index}
-              className="grid justify-items-center items-center border bg-[#02f9ae] sticky top-0 z-20"
+              className="grid justify-items-center items-center border bg-[#02f9ae] sticky top-[40px] z-20"
             >
               {day}
             </div>
