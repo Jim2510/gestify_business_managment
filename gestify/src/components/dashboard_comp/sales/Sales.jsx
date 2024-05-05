@@ -42,7 +42,7 @@ export function Sales() {
           </div>
           <div className="col-span-2 h-[300px] shadow-2xl flex justify-center pt-5 bg-white flex-col items-center gap-5">
             <h2 className="font-semibold">DATO 2</h2>
-            <div className="">
+            <div className="w-full h-full flex justify-center items-center">
               <RLineChart />
             </div>
           </div>
