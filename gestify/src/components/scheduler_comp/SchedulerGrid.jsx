@@ -12,7 +12,7 @@ export function SchedulerGrid() {
     }
 
     return (
-        <div className="col-start-2 w-full h-full absolute top-[80px] grid grid-cols-7 grid-rows-24 max-h-[960px]">
+        <div className="col-start-2 w-full h-full absolute top-[80px] grid grid-cols-7 grid-rows-24 max-h-[960px] ">
             {array.map((_, index) => <div key={index} onClick={handleAddEvent} className="border border-grey-400 row-span-1 col-span-1 bg-white hover:bg-gray-200">
                 <div className="flex"></div>
             </div>)}
