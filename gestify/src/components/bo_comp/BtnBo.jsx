@@ -3,7 +3,7 @@ function SingleBtn({ btnName, onClick }) {
     <>
       <div
         onClick={() => onClick(btnName)}
-        className=" cursor-pointer p-10 min-w-[100px] h-[50px] shadow-2xl m-1 text-center flex justify-center items-center active:shadow-none"
+        className="bg-white cursor-pointer p-10 min-w-[100px] h-[50px] shadow-2xl m-1 text-center flex justify-center items-center active:shadow-none"
       >
         {btnName}
       </div>
@@ -14,7 +14,7 @@ function SingleBtn({ btnName, onClick }) {
 export function BtnBo({ arrBtn, handleBtnClick }) {
   return (
     <>
-      <div className="p-5">
+      <div className="px-4 flex flex-col gap-2">
         {arrBtn &&
           arrBtn.map((el, index) => (
             <SingleBtn btnName={el} key={index} onClick={handleBtnClick} />

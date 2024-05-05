@@ -5,6 +5,7 @@ export function useAnimation() {
   const [isHidden, setIsHidden] = useState(false);
   const [userHidden, setUserHidden] = useState(false);
   const [isHover, setIsHover] = useState(true);
+  const [onHover, setOnHover] = useState(true);
 
   const handleHidden = () => {
     setIsHidden(!isHidden);
@@ -12,6 +13,10 @@ export function useAnimation() {
 
   const handleUserHidden = () => {
     setUserHidden(!userHidden);
+  };
+
+  const handleHover = () => {
+    setOnHover(!onHover);
   };
 
   const springs = useSpring({
@@ -50,6 +55,11 @@ export function useAnimation() {
     zIndex: isHover ? 1 : 20,
   });
 
+  const styleBtn = useSpring({
+    background: onHover ? "transparent" : "white",
+    color: onHover ? "white" : "black",
+  });
+
   return {
     springs,
     springs2,
@@ -61,5 +71,9 @@ export function useAnimation() {
     cardStyle,
     isHover,
     setIsHover,
+    onHover,
+    setOnHover,
+    handleHover,
+    styleBtn,
   };
 }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 function Btn() {
   const buttons = [
-    { title: "HOME", path: "/homepage" },
     { title: "DASHBOARD", path: "/dashboard/sales" },
     { title: "EVENTS", path: "/scheduler/calendar" },
     { title: "BACKOFFICE", path: "/backoffice" },
