@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../../store/slices/authSlice";
 import { useAnimation } from "../../../hooks/useAnimation";
 import { animated } from "@react-spring/web";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const dispatch = useDispatch();
@@ -21,11 +22,13 @@ export function Navbar() {
         <div className="dark:bg-slate-800 bg-white dark:text-white text-black w-full h-10 shadow-2xl flex justify-end md:justify-between items-center fixed">
           <div className="w-full justify-start flex">
             <div className="w-[200px] overflow-hidden h-[35px]">
-              <img
-                src="..\src\assets\gestify__1_-removebg-preview_1.png"
-                alt=""
-                className="min-w-[200px] relative top-[-80px]"
-              />
+              <Link to={"/homepage"}>
+                <img
+                  src="..\src\assets\gestify__1_-removebg-preview_1.png"
+                  alt=""
+                  className="min-w-[200px] relative top-[-80px]"
+                />
+              </Link>
             </div>
           </div>
           <div className="">
