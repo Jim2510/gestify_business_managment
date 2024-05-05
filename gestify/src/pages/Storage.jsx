@@ -3,10 +3,12 @@ import { Product } from "../components/storage_comp/Product";
 import { useSelector } from "react-redux";
 import { TitleSection } from "../components/standard_comp/TitleSection";
 import { Time } from "../components/homepage/Time";
+import { useFetchProducts } from "../hooks/useFetchProducts";
 
 export function Storage() {
-  const prods = useSelector((state) => state.prods.value);
-  const [filteredProducts, setFilteredProducts] = useState(prods);
+  // const prods = useSelector((state) => state.prods.value);
+  const { data } = useFetchProducts()
+  const [filteredProducts, setFilteredProducts] = useState(data);
   const [currentPage, setCurrentPage] = useState(1);
   const [toggleSearchBar, setToggleSearchBar] = useState(false);
   const [input, setSearchInput] = useState("");
@@ -17,11 +19,11 @@ export function Storage() {
   const npage = Math.ceil(filteredProducts.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
   useEffect(() => {
-    const filterProducts = prods.filter(({ name }) =>
+    const filterProducts = data.filter(({ name }) =>
       name.toLowerCase().includes(input.toLowerCase())
     );
     setFilteredProducts(filterProducts);
-  }, [input, prods]);
+  }, [input, data]);
   const prePage = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
@@ -97,7 +99,7 @@ export function Storage() {
           ))}
         </div>
         <div className="w-[80%] grid grid-cols-5 justify-items-center items-center gap-0  ">
-          {prods &&
+          {data &&
             records.map((product) => (
               <Product key={product.id} product={product} />
             ))}
@@ -120,9 +122,8 @@ export function Storage() {
               {numbers.map((n, i) => (
                 <li
                   key={i}
-                  className={`mr-[5px] text-[17px] font-medium px-[12px] py-[2px] rounded-full text-[#1E293B] justify-center items-center ${
-                    currentPage === n ? "bg-[#02f9ae]" : ""
-                  }`}
+                  className={`mr-[5px] text-[17px] font-medium px-[12px] py-[2px] rounded-full text-[#1E293B] justify-center items-center ${currentPage === n ? "bg-[#02f9ae]" : ""
+                    }`}
                 >
                   <button onClick={() => changePage(n)}>{n}</button>
                 </li>
