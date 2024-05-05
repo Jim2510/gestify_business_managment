@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import { NavbarLand } from "./NavbarLand";
 import { SectionOne } from "./SectionOne";
 import { SectionThree } from "./SectionThree";
@@ -11,6 +12,7 @@ export function BaseLanding() {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <Footer />
         </div>
         </>
     )
