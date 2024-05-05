@@ -3,7 +3,17 @@ export function LabelUser({ name, role, userImg }) {
     <>
       <div className="w-full flex flex-row gap-2 pt-[40px] ml-6">
         <div className="bg-white w-[80px] h-[80px] rounded-full relative shadow-2xl flex justify-center items-center">
-          <img src={userImg} className="absolute" />
+          {/* <img src={userImg} className="absolute" /> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fillRule="currentColor"
+            className="bi bi-person"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+          </svg>
         </div>
         <div className="text-[14px] font-bold flex justify-center items-center flex-col ml-1 leading-7 dark:text-white">
           <h3>Name: {name}</h3>

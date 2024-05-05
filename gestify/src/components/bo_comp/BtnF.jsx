@@ -1,7 +1,7 @@
 export function BtnF({ handleAdd, handleRemove, handleUpdate, handleRefresh }) {
   return (
     <>
-      <div className="w-full h-full flex bg-[#89f9ea]">
+      <div className="w-full h-full flex bg-[#02f9ae]">
         <div className="group w-[25%] h-full flex justify-center items-center relative">
           <button onClick={handleAdd}>
             <svg
