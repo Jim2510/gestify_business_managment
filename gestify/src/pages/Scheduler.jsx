@@ -24,7 +24,7 @@ export function Scheduler() {
         '23:00 ', '0:00 ', '1:00 ', '2:00 ', '3:00 ', '4:00 ', '5:00 ', '6:00 '
     ];
     return (
-        <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center mt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]">
+        <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center pt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]">
             <TitleSection titleName="CALENDAR" />
             <div className="w-[85%] h-[75%] overflow-y-auto">
                 <div className="grid grid-cols-8 grid-rows-26 w-full h-fit shadow-lg rounded-md bg-white relative font-semibold">

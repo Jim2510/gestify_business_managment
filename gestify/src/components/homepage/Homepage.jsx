@@ -39,7 +39,7 @@ export function Homepage({ name = 'Tega' }) {
           <div className="w-[40%] gap-4 h-[400px] p-4 mt-10 grid grid-rows-2 grid-cols-1 justify-center items-center ">
             <div className="grid grid-cols-3 h-full gap-4 font-semibold justify-between items-center text-[20px] text-center">
               <div className="shadow-2xl col-span-1 py-6 h-full flex justify-around items-center flex-col bg-white">
-                <Link to='/dashboard' className="flex flex-col justify-around w-full h-full items-center">
+                <Link to='/dashboard/sales' className="flex flex-col justify-around w-full h-full items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="50"
