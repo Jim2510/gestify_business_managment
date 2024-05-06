@@ -59,7 +59,7 @@ export function Homepage({ name = "User" }) {
 
               <div className="shadow-2xl col-span-1 py-6 h-full flex justify-around items-center flex-col bg-white">
                 <Link
-                  to="/events"
+                  to="/scheduler/calendar"
                   className="flex flex-col justify-around w-full h-full items-center"
                 >
                   <svg
