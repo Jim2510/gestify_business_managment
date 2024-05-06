@@ -4,16 +4,18 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../../store/slices/authSlice";
 import { useAnimation } from "../../../hooks/useAnimation";
 import { animated } from "@react-spring/web";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export function Navbar() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const { sidebarSpring, navSpring, handleHidden, handleUserHidden } =
     useAnimation();
 
   const handleLogOut = () => {
     dispatch(logout());
+    navigate('/login')
   };
 
   return (
