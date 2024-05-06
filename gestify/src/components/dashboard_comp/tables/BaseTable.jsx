@@ -48,7 +48,7 @@ export function BaseTable() {
 
   return (
     <>
-      <div className="group flex flex-col justify-center items-center w-full pb-10">
+      <div className="flex flex-col justify-center items-center w-full pb-10">
         <div className="group relative mb-6">
           <DisplayDate
             dispValue={dispValue.toLocaleDateString()}
