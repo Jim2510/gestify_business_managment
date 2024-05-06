@@ -16,6 +16,7 @@ app.get("/", (_, res) => {
 });
 
 app.use("/api", require("../server/api/routes/products"));
+// app.use("/api", require("../server/api/routes/orders"));
 
 connectDB();
 
