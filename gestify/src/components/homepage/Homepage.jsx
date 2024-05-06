@@ -3,7 +3,7 @@ import { useAnimation } from "../../hooks/useAnimation";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { Link } from "react-router-dom";
 
-export function Homepage({ name = "Tega" }) {
+export function Homepage({ name = "User" }) {
   const { springs, springs2, springs3 } = useAnimation();
 
   return (
@@ -14,7 +14,7 @@ export function Homepage({ name = "Tega" }) {
             <animated.div style={springs} className="w-[100%] mt-20 ">
               <p className="text-white mt-[-30px] font-extrabold pl-16 text-[60px] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 WELCOME{" "}
-                <span className="text-[#997fde] underline ml-4">
+                <span className="text-[#00008b] underline ml-4">
                   {name.toLocaleUpperCase()}
                 </span>
               </p>
@@ -149,8 +149,8 @@ export function Homepage({ name = "Tega" }) {
               </div>
               <div className=" bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4">
                 DAY
-                <ProgressBar completed={80} bgColor="#997fde" />
-                <div className="text-[#997fde]"></div>
+                <ProgressBar completed={80} bgColor="#00008b" />
+                <div className="text-[#00008b]"></div>
               </div>
             </div>
           </div>

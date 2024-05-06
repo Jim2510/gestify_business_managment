@@ -3,6 +3,11 @@ import { useState } from "react";
 export function SchedulerGrid() {
     const [addEvent, setAddEvent] = useState({ display: "none" });
     const [addEventButton, setAddEventButton] = useState({ display: "none" });
+    const [selectedBlock, setSelectedBlock] = useState(null);
+    function handleAddEvent(index) {
+        setSelectedBlock(index);
+        setAddEvent({ display: "flex" });
+    }
     function handleAddEvent() {
         setAddEvent({ display: "flex" });
     }
@@ -28,7 +33,7 @@ export function SchedulerGrid() {
             {array.map((_, index) => (
                 <div
                     key={index}
-                    onClick={handleAddEvent}
+                    onClick={() => handleAddEvent(index)}
                     className="border border-grey-400 row-span-1 col-span-1 bg-white hover:bg-gray-200"
                 >
                     <div className="flex"></div>
