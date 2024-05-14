@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Orders = require("./models/Orders");
 
 const connect = async () => {
   try {
@@ -15,6 +14,7 @@ const disconnect = async () => await mongoose.disconnect();
 const models = {
   Product: require("./models/Product"),
   Orders: require("./models/Orders"),
+  Customer: require("./models/Customer"),
 };
 
 module.exports = {

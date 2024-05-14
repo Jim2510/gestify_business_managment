@@ -24,3 +24,8 @@ const updateOrder = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+module.exports = {
+  getOrders,
+  updateOrder,
+};
