@@ -4,10 +4,11 @@ import { useSelector } from "react-redux";
 import { TitleSection } from "../components/standard_comp/TitleSection";
 import { Time } from "../components/homepage/Time";
 import { useFetchProducts } from "../hooks/useFetchProducts";
+import { LoadingCircle } from "../components/storage_comp/LoadingCircle";
 
 export function Storage() {
   // const prods = useSelector((state) => state.prods.value);
-  const { data } = useFetchProducts();
+  const { data ,isLoading} = useFetchProducts();
   const [filteredProducts, setFilteredProducts] = useState(data);
   const [currentPage, setCurrentPage] = useState(1);
   const [toggleSearchBar, setToggleSearchBar] = useState(false);
@@ -64,7 +65,7 @@ export function Storage() {
     >
       <TitleSection titleName="STORAGE" />
       <div className="flex flex-col w-[85%] h-[75%] shadow-lg rounded-md overflow-auto 2xl:w-[80%] bg-[#FAFAFC] justify-center items-center">
-        <div className="top-[10px] bg-white w-[17%] h-[35px] rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center sticky ">
+        <div className="top-[10px] bg-white w-[17%] h-[35px] rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center sticky">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -90,6 +91,7 @@ export function Storage() {
           style={searchBar}
           className="bg-white w-[17%] flex-col rounded-xl overflow-y-scroll absolute z-20 mt-[65px] h-[300px] ml-[10px]"
         >
+          
           {filteredProducts.map((result, id) => (
             <div
               className="px-[5px] py-[10px] hover:bg-[#efefef] font-semibold text-[#1E293B]"
@@ -99,6 +101,7 @@ export function Storage() {
             </div>
           ))}
         </div>
+        {isLoading && <LoadingCircle/>}
         <div className="w-[80%] grid grid-cols-5 justify-items-center items-center gap-0  ">
           {data &&
             records.map((product) => (
