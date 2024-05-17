@@ -12,9 +12,12 @@ import { ProgressionBar } from "./ProgressionBar";
 import documents from "../../../data/documents";
 import { RowF } from "../../bo_comp/RowF";
 import { BtnExp } from "./BtnExp";
+import { useFetchCollections } from "../../../hooks/useFetchCollections";
 import { BtnSales } from "./BtnSales";
 
 export function Sales() {
+  const {data}=useFetchCollections()
+  console.log(data)
   return (
     <>
       <div className="flex items-center justify-center flex-col gap-4 w-[95%] mt-[100px] relative ">
@@ -28,10 +31,10 @@ export function Sales() {
           <BtnExp btnName={"EXPENDITURE"} link={"/dashboard/expenditure"} />
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
-          <FLineChart collection={"COLLECTION 1"} earns={2045} />
-          <FLineChart collection={"COLLECTION 2"} earns={1355} />
-          <FLineChart collection={"COLLECTION 3"} earns={4045} />
-          <FLineChart collection={"COLLECTION 4"} earns={1045} />
+          <FLineChart collection={"COLLECTION 1"} earns={2045} dataT={data[0]}/>
+          <FLineChart collection={"COLLECTION 2"} earns={1355} dataT={data[1]}/>
+          <FLineChart collection={"COLLECTION 3"} earns={4045} dataT={data[2]}/>
+          <FLineChart collection={"COLLECTION 4"} earns={1045} dataT={data[3]}/>
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
           <div className=" col-span-1 h-[300px] shadow-2xl justify-center items-center bg-white flex flex-col">

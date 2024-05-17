@@ -1,7 +1,8 @@
-import dataT from "../../../data/dataT";
+
 import { RAreaChart } from "../graphs/AllGraphs";
 
-export function FLineChart({ collection, earns }) {
+export function FLineChart({ collection, earns,dataT }) {
+  
   return (
     <>
       <div className="col-span-1 h-[100px] bg-white shadow-xl flex justify-center items-center w-full gap-5">

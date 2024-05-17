@@ -38,7 +38,7 @@ const updateCustomers = async (req, res) => {
     const customer = await Customer.findByIdAndUpdate(id, req.body);
 
     if (!customer) {
-      return res.status(404).json({ message: "product not found" });
+      return res.status(404).json({ message: "customer not found" });
     }
 
     const updatedCustomer = await Customer.findById(id);

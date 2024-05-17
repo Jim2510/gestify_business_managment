@@ -20,4 +20,14 @@ app.use("/customers", require("./routes/customers"));
  */
 app.use("/users", require("./routes/users"));
 
+/**
+ * @path /api/orders
+ */
+app.use("/collections", require("./routes/collections"));
+
+/**
+ * @path /api/orders
+ */
+app.use("/invoices", require("./routes/invoices"));
+
 module.exports = app;

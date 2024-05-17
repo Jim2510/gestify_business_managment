@@ -1,5 +1,5 @@
-const User = require("../../db/models/User.js")
-const config = require("../../config.js")
+const User = require("../../db/models/User.js");
+const config = require("../../config.js");
 const jwt = require("jwt-simple");
 
 exports.login = function (req, res) {
@@ -7,23 +7,25 @@ exports.login = function (req, res) {
     if (err) {
       console.log("Error");
     } else {
-      var payload = { 
-        id: user.id, 
-        expire: Date.now() + 1000 * 60 * 60 * 24 * 7 
-      }
+      const payload = {
+        id: user.id,
+        expire: Date.now() + 1000 * 60 * 60 * 24 * 7,
+      };
 
-      var token = jwt.encode(payload, config.jwtSecret)
+      const token = jwt.encode(payload, config.jwtSecret);
 
-      res.json({ token: token })
+      res.json({ token: token });
     }
   });
 };
 
 exports.register = function (req, res) {
   User.register(
-    new User({ 
-      username: req.body.username
-    }), req.body.password, function (err, msg) {
+    new User({
+      username: req.body.username,
+    }),
+    req.body.password,
+    function (err, msg) {
       if (err) {
         res.send(err);
       } else {
@@ -33,10 +35,10 @@ exports.register = function (req, res) {
   );
 };
 
-exports.profile = function(req, res) {
+exports.profile = function (req, res) {
   res.json({
-    message: 'You made it to the secured profile',
+    message: "You made it to the secured profile",
     user: req.user,
-    token: req.query.secret_token
-  })
-}
+    token: req.query.secret_token,
+  });
+};
