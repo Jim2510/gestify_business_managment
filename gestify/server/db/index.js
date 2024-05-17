@@ -15,6 +15,7 @@ const models = {
   Product: require("./models/Product"),
   Orders: require("./models/Orders"),
   Customer: require("./models/Customer"),
+  Collection: require("./models/Collection"),
 };
 
 module.exports = {

@@ -16,4 +16,9 @@ app.use("/orders", require("./routes/orders"));
  */
 app.use("/customers", require("./routes/customers"));
 
+/**
+ * @path /api/orders
+ */
+app.use("/collections", require("./routes/collections"));
+
 module.exports = app;
