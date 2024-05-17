@@ -12,8 +12,8 @@ export function useFetchCollections() {
           return res.json();
         } else throw new Error(res.statusText);
       })
-      .then((data) => setData(data))
+      .then((data) => setData(data[0]))
       .catch((error) => console.error(error.message));
   }, []);
-  return { data ,isLoading};
+  return { data,isLoading};
 }

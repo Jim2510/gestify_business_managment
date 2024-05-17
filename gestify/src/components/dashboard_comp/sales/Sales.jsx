@@ -31,10 +31,10 @@ export function Sales() {
           <BtnExp btnName={"EXPENDITURE"} link={"/dashboard/expenditure"} />
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
-          <FLineChart collection={"COLLECTION 1"} earns={2045} dataT={data[0]}/>
-          <FLineChart collection={"COLLECTION 2"} earns={1355} dataT={data[1]}/>
-          <FLineChart collection={"COLLECTION 3"} earns={4045} dataT={data[2]}/>
-          <FLineChart collection={"COLLECTION 4"} earns={1045} dataT={data[3]}/>
+          <FLineChart collection={"COLLECTION 1"} earns={2045} dataT={data.collection1}/>
+          <FLineChart collection={"COLLECTION 2"} earns={1355} dataT={data.collection2}/>
+          <FLineChart collection={"COLLECTION 3"} earns={4045} dataT={data.collection3}/>
+          <FLineChart collection={"COLLECTION 4"} earns={1045} dataT={data.collection4}/>
         </div>
         <div className="grid grid-cols-4 px-4 gap-4 w-full">
           <div className=" col-span-1 h-[300px] shadow-2xl justify-center items-center bg-white flex flex-col">

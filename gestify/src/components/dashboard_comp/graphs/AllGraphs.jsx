@@ -15,7 +15,6 @@ import {
 } from "recharts";
 import dataM from "../../../data/dataMarimekko";
 import datab from "../../../data/dataBar";
-import dataT from "../../../data/dataT";
 import dataBar from "../../../data/datab";
 import dataRPie from "../../../data/dataRPie";
 
@@ -109,7 +108,7 @@ export function RBarChart() {
   );
 }
 
-export function RAreaChart() {
+export function RAreaChart({dataT}) {
   return (
     <>
       <AreaChart

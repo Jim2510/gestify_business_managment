@@ -18,7 +18,7 @@ app.use("/customers", require("./routes/customers"));
 /**
  * @path /api/users
  */
-app.use("/users", require("./routes/users"));
+// app.use("/users", require("./routes/users"));
 
 /**
  * @path /api/orders
