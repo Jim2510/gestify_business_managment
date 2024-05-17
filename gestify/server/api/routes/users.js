@@ -9,10 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 require('../../middleware/auth.js')()
 
-const mongoose = require('mongoose');
-const mongoString = 'MongoDB Connection String';
-mongoose.connect(mongoString);
-
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 app.use(passport.initialize());
