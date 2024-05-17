@@ -15,6 +15,10 @@ app.use("/orders", require("./routes/orders"));
  * @path /api/orders
  */
 app.use("/customers", require("./routes/customers"));
+/**
+ * @path /api/users
+ */
+app.use("/users", require("./routes/users"));
 
 /**
  * @path /api/orders

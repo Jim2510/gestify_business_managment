@@ -3,13 +3,17 @@ import { useState } from "react";
 export function SchedulerGrid() {
     const [addEvent, setAddEvent] = useState({ display: "none" });
     const [addEventButton, setAddEventButton] = useState({ display: "none" });
-    const [selectedBlock, setSelectedBlock] = useState(null);
-    function handleAddEvent(index) {
-        setSelectedBlock(index);
-        setAddEvent({ display: "flex" });
+    const [addEventDate, setAddEventDate] = useState({ display: "none" });
+    const [eventInput, setEventInput] = useState('');
+    function handleEventInput(e){
+        setEventInput(e.target.value)
+    }
+    function handleAddEventDate(index) {
+        setAddEventDate(index);
+        setAddEvent({ display: "flex"})
     }
     function handleAddEvent() {
-        setAddEvent({ display: "flex" });
+        setAddEventButton({ display: "flex" });
     }
     const array = [];
     for (let i = 1; i <= 168; i++) {
@@ -33,10 +37,17 @@ export function SchedulerGrid() {
             {array.map((_, index) => (
                 <div
                     key={index}
-                    onClick={() => handleAddEvent(index)}
-                    className="border border-grey-400 row-span-1 col-span-1 bg-white hover:bg-gray-200"
+                    onClick={() => handleAddEventDate(index)}
+                    className="border border-grey-400 row-span-1 col-span-1 bg-white hover:bg-gray-200 flex justify-center items-center"
                 >
-                    <div className="flex"></div>
+                    {addEventDate === index && (
+                        <div style={addEventButton} className="flex w-[200px] h-[100px] bg-[#1cdafe] rounded-lg flex-col items-center relative ">
+                            <div className="font-semibold text-white mt-[30px] absolute">{eventInput}</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="absolute top-2 right-3 fill-white cursor-pointer" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+                        </div>
+                    )}
                 </div>
             ))}
             <div
@@ -46,6 +57,7 @@ export function SchedulerGrid() {
                 <div className="p-4 flex flex-col justify-center items-center w-full h-full">
                     <input
                         style={inputStyle.input}
+                        onChange={handleEventInput}
                         className="border-b-4 border-b-[#89f9ea] border-x-0 border-t-0 bg-white leading-[0px] "
                         placeholder="Add Event"
                         type="text"
@@ -66,7 +78,7 @@ export function SchedulerGrid() {
                             Details
                         </button>
                         <button
-                            onClick={setAddEvent}
+                            onClick={handleAddEvent}
                             className="border-b-4 border-b-[#89f9ea] border-x-0 border-t-0 p-2 mt-[40px] bg-white text-[#6B7280] hover:text-black"
                         >
                             ADD
