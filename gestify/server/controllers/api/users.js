@@ -1,39 +1,42 @@
-const User = require("../../db/models/User");
-const jwt=require('jsonwebtoken')
-const passport = require('passport');
-const login = async (req, res) => {
-    try {
-      const { userName,password } = req.body;
-      const user = await User.findOne({userName});
+const User = require("../../db/models/User.js")
+const config = require("../../config.js")
+const jwt = require("jwt-simple");
 
-      if(user&&user.password===password){
-        const payload = {
-            id:user.id,
-            userName
-        }
-        const { SECRET = '' } = process.env
-        const token=jwt.sign(payload,SECRET)
-       res.status(200).json(user); 
-      }else {
-        res.status(404).json({message:'User not found'})
+exports.login = function (req, res) {
+  User.findOne({ username: req.body.username }, (err, user) => {
+    if (err) {
+      console.log("Error");
+    } else {
+      var payload = { 
+        id: user.id, 
+        expire: Date.now() + 1000 * 60 * 60 * 24 * 7 
       }
-      
-    } catch (error) {
-      res.status(500).json({ message: error.message });
-    }
-  };
 
-  const signUp = async (req, res) => {
-    try {
-        if (req.body.userName) {
-            res.status(400).json({ msg: 'Username already in use' })
-        } else {
-            const user = await User.create(req.body)
-            res.status(201).json({ msg: 'User created successfully ' })
-        }
-    } catch (error) {
-        res.status(500).json({ message: error.message });
+      var token = jwt.encode(payload, config.jwtSecret)
+
+      res.json({ token: token })
     }
-    
-   
+  });
+};
+
+exports.register = function (req, res) {
+  User.register(
+    new User({ 
+      username: req.body.username 
+    }), req.body.password, function (err, msg) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send({ message: "Successful" });
+      }
+    }
+  );
+};
+
+exports.profile = function(req, res) {
+  res.json({
+    message: 'You made it to the secured profile',
+    user: req.user,
+    token: req.query.secret_token
+  })
 }
