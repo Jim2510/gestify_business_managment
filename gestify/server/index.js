@@ -5,7 +5,6 @@ const { connect: connectDB } = require("./db");
 const helmet = require("helmet");
 const app = express();
 
-
 //middleware
 app.use(cors());
 app.use(helmet());
@@ -21,6 +20,7 @@ app.use("/api", require("../server/api/routes/products"));
 app.use("/api", require("../server/api/routes/orders"));
 app.use("/api", require("../server/api/routes/customers"));
 app.use("/api", require("../server/api/routes/collections"));
+app.use("/api", require("../server/api/routes/invoices"));
 
 connectDB();
 
