@@ -30,4 +30,19 @@ app.use("/collections", require("./routes/collections"));
  */
 app.use("/invoices", require("./routes/invoices"));
 
+/**
+ * @path /api/orders
+ */
+app.use("/saledata", require("./routes/saledata"));
+
+/**
+ * @path /api/orders
+ */
+app.use("/saledata", require("./routes/piedata"));
+
+/**
+ * @path /api/orders
+ */
+app.use("/bardata", require("./routes/bardata"));
+
 module.exports = app;

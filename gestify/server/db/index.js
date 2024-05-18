@@ -17,6 +17,10 @@ const models = {
   Customer: require("./models/Customer"),
   Collection: require("./models/Collection"),
   Invoice: require("./models/Invoice"),
+  SaleData: require("./models/SaleD"),
+  PieData: require("./models/Pie"),
+  BarData: require("./models/Bar"),
+  BarSale: require("./models/BarSale"),
 };
 
 module.exports = {
