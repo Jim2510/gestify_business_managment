@@ -4,10 +4,10 @@ import { products } from "../../data/storageProducts";
 const productsSlice = createSlice({
     name: 'prods',
     initialState: {
-        value: products,
+        value: [],
     },
     reducers: {
-
+       
     }
 
 })
