@@ -1,17 +1,21 @@
-import { Footer } from "./Footer";
 import { NavbarLand } from "./NavbarLand";
-import { SectionOne } from "./SectionOne";
+
 import { SectionThree } from "./SectionThree";
-import { SectionTwo } from "./SectionTwo";
+
+import { Footer } from "./Footer";
+import Cards from "./Cards";
+import Hero from "./Hero";
+import Analytics from "./Analytics";
 
 export function BaseLanding() {
     return (
         <>
-        <div className="flex flex-col bg-gradient-to-b from-[#1cdafe] to-[#02f9ae] ">
+        <div className="flex flex-col bg-white ">
         <NavbarLand />
-        <SectionOne />
-        <SectionTwo />
+        <Hero />
+        <Analytics />
         <SectionThree />
+        <Cards />
         <Footer />
         </div>
         </>

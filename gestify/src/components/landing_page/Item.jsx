@@ -1,4 +1,5 @@
-export function Item() {
+export function Item({Links, title}) {
+    
     return <>
      <ul>
       <h1 className="mb-1 font-semibold">{title}</h1>
@@ -16,3 +17,5 @@ export function Item() {
     </ul>
     </>
 }
+
+export default Item;

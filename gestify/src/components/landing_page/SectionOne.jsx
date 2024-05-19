@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 export function SectionOne() {
   return (
     <>
-      <div className="flex justify-center  w-full h-full items-center ">
-        <div className="flex justify-center items-center w-[95%] h-[500px]">
+      <div className="flex justify-center  w-full h-full items-center mt-[-100px]">
+        <div className="flex justify-center items-center w-full h-[500px]">
           <div className="flex flex-col items-center">
-            <div className="flex justify-center w-full h-full gap-4 items-center  ">
+            <div className="flex justify-center w-full h-full gap-9 items-center  ">
               <div className="flex flex-col items-start w-[700px] justify-center h-screen ml-[100px] ">
                 <h1 className='text-4xl font-black md:text-8xl'>GESTIFY</h1>
                 <h2 className="text-md md:text-2xl" >OTTIMIZZA LA GESTIONE DELLA TUA AZIENDA!</h2>
@@ -24,7 +24,7 @@ export function SectionOne() {
                   </Link>
                 </div>
               </div>
-              <div className="w-[50%] mr-[100px] h-full ">
+              <div className="w-[60%] mr-[100px] h-full ">
                 <img src="../../src/assets/dash.png" alt="" />
               </div>
             </div>
