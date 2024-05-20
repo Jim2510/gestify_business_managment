@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "description": "Laptop Dell XPS 15",
+    "tot": 1500,
+    "number": 5
+  },
+  {
+    "id": 2,
+    "description": "Smartphone Samsung Galaxy S21",
+    "tot": 800,
+    "number": 8
+  },
+  {
+    "id": 3,
+    "description": "Monitor LG UltraWide",
+    "tot": 300,
+    "number": 12
+  },
+  {
+    "id": 4,
+    "description": "Tablet Apple iPad Pro",
+    "tot": 1000,
+    "number": 17
+  },
+  {
+    "id": 5,
+    "description": "Smartwatch Apple Watch Series 6",
+    "tot": 500,
+    "number": 10
+  },
+  {
+    "id": 6,
+    "description": "Router Netgear Nighthawk",
+    "tot": 150,
+    "number": 9
+  },
+  {
+    "id": 7,
+    "description": "Headphones Sony WH-1000XM4",
+    "tot": 350,
+    "number": 15
+  },
+  {
+    "id": 8,
+    "description": "Gaming Console PlayStation 5",
+    "tot": 500,
+    "number": 6
+  },
+  {
+    "id": 9,
+    "description": "External Hard Drive Seagate 2TB",
+    "tot": 100,
+    "number": 14
+  },
+  {
+    "id": 10,
+    "description": "Keyboard Mechanical Razer",
+    "tot": 150,
+    "number": 20
+  },
+  {
+    "id": 11,
+    "description": "Smart Speaker Amazon Echo",
+    "tot": 100,
+    "number": 11
+  },
+  {
+    "id": 12,
+    "description": "Drone DJI Mavic Air 2",
+    "tot": 800,
+    "number": 13
+  },
+  {
+    "id": 13,
+    "description": "VR Headset Oculus Quest 2",
+    "tot": 300,
+    "number": 16
+  },
+  {
+    "id": 14,
+    "description": "Smart TV Samsung 55\"",
+    "tot": 600,
+    "number": 8
+  },
+  {
+    "id": 15,
+    "description": "Wireless Earbuds Bose",
+    "tot": 200,
+    "number": 9
+  },
+  {
+    "id": 16,
+    "description": "Laptop Apple MacBook Pro",
+    "tot": 2000,
+    "number": 18
+  },
+  {
+    "id": 17,
+    "description": "Desktop PC HP Pavilion",
+    "tot": 700,
+    "number": 7
+  },
+  {
+    "id": 18,
+    "description": "Projector Epson Home Cinema",
+    "tot": 500,
+    "number": 12
+  },
+  {
+    "id": 19,
+    "description": "Printer Canon Pixma",
+    "tot": 150,
+    "number": 15
+  },
+  {
+    "id": 20,
+    "description": "Smartphone Google Pixel 5",
+    "tot": 700,
+    "number": 10
+  },
+  {
+    "id": 21,
+    "description": "Graphics Card NVIDIA RTX 3080",
+    "tot": 700,
+    "number": 14
+  }
+]
