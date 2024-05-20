@@ -24,7 +24,7 @@ app.use("/api", require("../server/api/routes/saledata"));
 app.use("/api", require("../server/api/routes/piedata"));
 app.use("/api", require("../server/api/routes/bardata"));
 app.use("/api", require("../server/api/routes/barsales"));
-// app.use("/api", require("../server/api/routes/invoices"));
+app.use("/api", require("../server/api/routes/invoices"));
 
 connectDB();
 
