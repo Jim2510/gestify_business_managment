@@ -15,7 +15,7 @@ app.get("/", (_, res) => {
   res.send("Server online");
 });
 
-// app.use("/api", require("../server/api/routes/users"));
+app.use("/api", require("../server/api/routes/users"));
 app.use("/api", require("../server/api/routes/products"));
 app.use("/api", require("../server/api/routes/orders"));
 app.use("/api", require("../server/api/routes/customers"));

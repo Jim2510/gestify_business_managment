@@ -10,7 +10,7 @@ import Analytics from "./Analytics";
 export function BaseLanding() {
     return (
         <>
-        <div className="flex flex-col bg-white ">
+        <div className="flex flex-col bg-white">
         <NavbarLand />
         <Hero />
         <Analytics />
