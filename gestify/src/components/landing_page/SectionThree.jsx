@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sectionthree.css";
 import Video from "../../assets/ana.mp4";
+import Tv from '../../assets/tvv.png'
 
 const SectionThree = () => {
   return (
@@ -21,14 +22,15 @@ const SectionThree = () => {
             Get Started
           </button>
         </div>
-        <div className="col-2">
-          <iframe
-            width="570"
+        <div className="flex justify-center items-center relative">
+            <img className="absolute flex w-[600px] top-[-120px] " src={Tv} alt="" />
+          <iframe className="absolute top-[-10px]"
+            width="600"
             height="320"
             src={Video}
             title="Youtube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; controls loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
