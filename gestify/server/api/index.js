@@ -38,7 +38,7 @@ app.use("/saledata", require("./routes/saledata"));
 /**
  * @path /api/orders
  */
-app.use("/saledata", require("./routes/piedata"));
+app.use("/piedata", require("./routes/piedata"));
 
 /**
  * @path /api/orders

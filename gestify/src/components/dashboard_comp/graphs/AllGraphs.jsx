@@ -17,13 +17,16 @@ import dataM from "../../../data/dataMarimekko";
 import datab from "../../../data/dataBar";
 import dataBar from "../../../data/datab";
 import dataRPie from "../../../data/dataRPie";
+import { useFetchData1Sales } from "../../../hooks/useFetchData1Sales";
 
 export function RespRadBar() {
+  const {data, loading } = useFetchData1Sales();
+console.log(data)
   return (
     <>
       <PieChart width={330} height={300}>
         <Pie
-          data={dataPie}
+          data={data}
           dataKey="value"
           nameKey="name"
           cx="50%"
@@ -32,7 +35,7 @@ export function RespRadBar() {
           fill="#02f9ae"
         />
         <Pie
-          data={dataPie}
+          data={data}
           dataKey="value"
           nameKey="name"
           cx="50%"
@@ -108,7 +111,7 @@ export function RBarChart() {
   );
 }
 
-export function RAreaChart({dataT}) {
+export function RAreaChart({ dataT }) {
   return (
     <>
       <AreaChart
