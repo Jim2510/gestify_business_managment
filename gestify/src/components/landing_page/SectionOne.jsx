@@ -8,9 +8,11 @@ export function SectionOne() {
           <div className="flex flex-col items-center">
             <div className="flex justify-center w-full h-full gap-9 items-center  ">
               <div className="flex flex-col items-start w-[700px] justify-center h-screen ml-[100px] ">
-                <h1 className='text-4xl font-black md:text-8xl'>GESTIFY</h1>
-                <h2 className="text-md md:text-2xl" >OTTIMIZZA LA GESTIONE DELLA TUA AZIENDA!</h2>
-                <p className="max-w-md text-sm md:text-base text-black-500" >
+                <h1 className="text-4xl font-black md:text-8xl">GESTIFY</h1>
+                <h2 className="text-md md:text-2xl">
+                  OTTIMIZZA LA GESTIONE DELLA TUA AZIENDA!
+                </h2>
+                <p className="max-w-md text-sm md:text-base text-black-500">
                   Benvenuti nella nostra landing page dedicata al nostro
                   innovativo gestionale aziendale! Siamo entusiasti di
                   presentarvi la soluzione che rivoluzionerà il modo in cui
