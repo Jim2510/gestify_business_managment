@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div>
-      <div className='max-w-[1000px] mt-[-60px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
+      <div className='max-w-[1000px] mt-[80px] w-full h-screen mx-auto text-center flex flex-col justify-center ' id='secone'>
         <p className='font-bold p-2'>
           EFFICIENCY ELEVATED, GROWTH GUARANTEED
         </p>
