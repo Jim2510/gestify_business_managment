@@ -1,29 +1,32 @@
-// const User=require('../../server/db/models/User.js')
-// const passport=require('passport')
-// const passportJWT=require('passport-jwt')
-// const config=require('../../server/config.js')
-// const ExtractJwt=passportJWT.ExtractJwt
-// const Strategy=passportJWT.Strategy
+const User = require("../../server/db/models/User.js");
+const passport = require("passport");
+const passportJWT = require("passport-jwt");
+const config = require("../../server/config.js");
+const ExtractJwt = passportJWT.ExtractJwt;
+const Strategy = passportJWT.Strategy;
 
+const params = {
+  secretOrKey: config.jwtSecret,
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+};
+module.exports = function () {
+  const strategy = new Strategy(params, function (payload, done) {
+    User.findById(payload.id, function (err, user) {
+      if (err) {
+        return done(new Error("UserNotFound"), null);
+      } else if (payload.expire <= Date.now()) {
+        return done(new Error("TokenExpired"), null);
+      } else {
+        return done(null, user);
+      }
+    });
+  });
 
-// const params={
-//   secretOrKey:config.jwtSecret,
-//   jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken()
-// }
-// module.exports=function(){
-//     const strategy = new Strategy(params, function(payload, done) {
-//         User.findById(payload.id, function(err, user) {
-//           if (err) {
-//             return done(new Error("UserNotFound"), null);
-//           } else if (payload.expire <= Date.now()) {
-//             return done(new Error("TokenExpired"), null);
-//           } else{
-//             return done(null, user);
-//           }
-//         });
-//       });
-    
-//       passport.use(strategy);
-    
-//       return { initialize: function() { return passport.initialize() }};
-// }
+  passport.use(strategy);
+
+  return {
+    initialize: function () {
+      return passport.initialize();
+    },
+  };
+};

@@ -108,7 +108,7 @@ export function RBarChart() {
   );
 }
 
-export function RAreaChart({dataT}) {
+export function RAreaChart({ dataT }) {
   return (
     <>
       <AreaChart

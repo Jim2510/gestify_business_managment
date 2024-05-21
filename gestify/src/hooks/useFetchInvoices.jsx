@@ -10,6 +10,7 @@ export function useFetchInvoices() {
       setIsLoading(true);
       setError(null);
       try {
+        setIsLoading(false);
         const res = await fetch("http://localhost:3000/api/invoices");
         if (!res.ok) {
           throw new Error(`Error: ${res.statusText}`);
@@ -18,8 +19,6 @@ export function useFetchInvoices() {
         setData(data);
       } catch (error) {
         setError(error.message);
-      } finally {
-        setIsLoading(false);
       }
     };
 
