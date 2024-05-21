@@ -14,7 +14,7 @@ export function Homepage({ name = "User" }) {
             <animated.div style={springs} className="w-[100%] mt-20 ">
               <p className="text-white mt-[-30px] font-extrabold pl-16 text-[60px] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                 WELCOME{" "}
-                <span className="text-[#00008b] underline ml-4">
+                <span className="text-[#e6e6cd] underline ml-4">
                   {name.toLocaleUpperCase()}
                 </span>
               </p>
@@ -138,16 +138,19 @@ export function Homepage({ name = "User" }) {
           </div>
 
           <div className="w-[900px] h-[400px] mt-10 flex flex-col justify-center items-center bg-transparent p-4">
-            <div className="grid grid-rows-3 w-full h-full grid-cols-1 gap-4 font-semibold justify-center items-center text-[20px] text-center ">
-              <div className=" bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4 ">
+            <div className="grid grid-rows-7 w-full h-full grid-cols-1 gap-4 font-semibold justify-center items-center text-[20px] text-center ">
+              <div className="w-full text-center row-span-1 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-[30px]">
+                GOALS
+              </div>
+              <div className="row-span-2 bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4 ">
                 MONTH
                 <ProgressBar completed={30} bgColor="#02f9ae" />
               </div>
-              <div className=" bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4">
+              <div className="row-span-2 bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4">
                 WEEK
                 <ProgressBar completed={60} bgColor="#1cdafe" />
               </div>
-              <div className=" bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4">
+              <div className="row-span-2 bg-white w-full shadow-2xl h-full px-10 flex flex-col justify-around py-4">
                 DAY
                 <ProgressBar completed={80} bgColor="#00008b" />
                 <div className="text-[#00008b]"></div>

@@ -30,7 +30,7 @@ export function Ex() {
 
   return (
     <>
-      <div className="w-full mt-[100px] px-5 flex flex-col justify-center h-full items-center">
+      <div className=" mt-[100px] flex flex-col justify-center items-center">
         <div className="grid grid-cols-5 justify-center items-center gap-4">
           <div className="col-span-1">
             <BtnSales btnName={"SALES"} link={"/dashboard/sales"} />
@@ -42,10 +42,12 @@ export function Ex() {
             <BtnExp btnName={"TABLES"} link={"/dashboard/tables"} />
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 grid-rows-3 gap-4 p-2 justify-center items-center">
-          <ExpDep />
-          <ExpDep />
-          <ExpDep />
+        <div className="w-[90%] flex flex-col justify-center h-full items-center">
+          <div className="w-full grid grid-cols-1 grid-rows-3 gap-4 p-2 justify-center items-center">
+            <ExpDep />
+            <ExpDep />
+            <ExpDep />
+          </div>
         </div>
       </div>
     </>

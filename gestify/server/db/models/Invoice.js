@@ -20,6 +20,6 @@ const dataSchema = new mongoose.Schema({
   },
 });
 
-const Invoice = mongoose.model("Data", dataSchema);
+const Invoice = mongoose.model("Invoices", dataSchema);
 
 module.exports = Invoice;

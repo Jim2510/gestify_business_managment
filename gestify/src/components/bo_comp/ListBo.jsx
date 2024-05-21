@@ -3,15 +3,18 @@ import fatt from "../../data/fatture";
 import { RowF } from "./RowF";
 import { BtnF } from "./BtnF";
 import { FormF } from "./FormF";
+import { useFetchInvoices } from "../../hooks/useFetchInvoices";
 
 const titleTable = ["Descrizione", "QT", "N°"];
 
 export function ListBo() {
+  const { data, isLoading } = useFetchInvoices();
   const handleForm = () => {
     const form = document.getElementById("form");
     form.classList.toggle("hidden");
     form.classList.toggle("flex");
   };
+  console.log(data);
 
   return (
     <>
@@ -23,8 +26,8 @@ export function ListBo() {
             third={titleTable[2]}
           />
         </div>
-        {fatt &&
-          fatt.map((el) => (
+        {data &&
+          data.map((el) => (
             <RowF
               description={el.description}
               tot={el.tot}
