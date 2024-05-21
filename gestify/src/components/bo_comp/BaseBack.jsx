@@ -30,7 +30,7 @@ export function BaseBack() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/products");
+        const res = await fetch("http://localhost:3000/api/customers");
         if (res.ok) {
           const datag = await res.json();
           setData(datag);
@@ -43,6 +43,8 @@ export function BaseBack() {
 
     fetchData();
   }, []);
+
+  console.log(data);
 
   return (
     <>

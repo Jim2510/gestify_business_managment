@@ -9,14 +9,14 @@ const {
   deleteProduct,
 } = require("../../controllers/api/products");
 
-app.get("/", getProducts);
+app.get("/products", getProducts);
 
-app.get("/:id", getProduct);
+app.get("/products/:id", getProduct);
 
-app.post("/", createProduct);
+app.post("/products", createProduct);
 
-app.put("/:id", updateProduct);
+app.put("/products/:id", updateProduct);
 
-app.delete("/:id", deleteProduct);
+app.delete("/products/:id", deleteProduct);
 
 module.exports = app;
