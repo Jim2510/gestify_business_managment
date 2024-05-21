@@ -3,11 +3,15 @@ import { useSpring } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { useState } from "react";
 import { FormRegister } from "../components/form_login/FormRegister";
+import { WelcomeLogin } from "../components/form_login/WelcomeLogin";
+import { WelcomeRegister } from "../components/form_login/WelcomeRegister";
 
 export function Login() {
+  const [isShowed, setIsShowed] = useState(false);
   const [isHidden, setHidden] = useState(false);
   const [isHidden2, setHidden2] = useState(true);
   function handleHidden() {
+    setIsShowed(!isShowed);
     setHidden(!isHidden);
     setHidden2(!isHidden2);
   }
@@ -44,19 +48,11 @@ export function Login() {
             alt=""
           />
         </div>
-        <div className="flex flex-col justify-center items-center font-bold text-white text-center">
-          <div className=" text-[32px]">
-            Welcome back in GESTIFY.
-            <br />
-            Are you new here?
-          </div>
-          <button
-            onClick={handleHidden}
-            className="border-[3px] border-white rounded-full w-[120px] text-[18px] h-[3rem] mt-[15px]"
-          >
-            Sign up
-          </button>
-        </div>
+        {isShowed ? (
+          <WelcomeLogin handleHidden={handleHidden} />
+        ) : (
+          <WelcomeRegister handleHidden={handleHidden} />
+        )}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import { Intst } from "./Ints";
-import fatt from "../../data/fatture";
 import { RowF } from "./RowF";
 import { BtnF } from "./BtnF";
 import { FormF } from "./FormF";
 import { useFetchInvoices } from "../../hooks/useFetchInvoices";
+import { LoadingCircle } from "../../components/storage_comp/LoadingCircle";
 
 const titleTable = ["Descrizione", "QT", "N°"];
 
@@ -14,7 +14,7 @@ export function ListBo() {
     form.classList.toggle("hidden");
     form.classList.toggle("flex");
   };
-  console.log(data);
+  console.log(isLoading);
 
   return (
     <>
@@ -35,11 +35,16 @@ export function ListBo() {
               key={el.id}
             />
           ))}
+        {isLoading && (
+          <div className="w-full h-full flex justify-center items-center">
+            <LoadingCircle />
+          </div>
+        )}
         <div className="sticky bottom-0 w-full h-[50px] bg-white border-t-2 border-gray-400">
           <BtnF handleAdd={handleForm} />
         </div>
         <div id="form" className="absolute w-full h-full top-0 bg-white hidden">
-          <div className="fixed ml-4 mt-4">
+          <div className="absolute left-4 top-4">
             <button onClick={handleForm}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
