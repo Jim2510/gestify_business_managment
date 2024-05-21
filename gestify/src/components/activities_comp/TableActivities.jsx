@@ -1,8 +1,15 @@
 import { IntActivities } from "./IntActivities";
 import objects from "../../data/orders";
 import { TableOrders } from "./TableOrders";
+import { useFetchOrders } from "../../hooks/useFetchOrders";
+import { LoadingCircle } from "../../components/storage_comp/LoadingCircle";
 
 export function TableActivities() {
+  
+  const {data, loading} = useFetchOrders();
+
+  console.log(data);
+
   return (
     <>
       <div className="w-full h-full flex justify-center flex-col overflow-auto bg-white scrollbar">
@@ -11,8 +18,9 @@ export function TableActivities() {
         </div>
 
         <div className="w-full h-full mt-14 ">
-          {objects &&
-            objects.map((l, index) => {
+          {loading && <LoadingCircle/>}
+          {data &&
+            data.map((l, index) => {
               return (
                 <TableOrders
                   key={index}
