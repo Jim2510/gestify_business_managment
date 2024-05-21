@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const OrderSchema = mongoose.Schema(
   {
     numero: {
-      type: Number,
+      type: String,
       require: true,
     },
     sigla: {
@@ -15,7 +15,7 @@ const OrderSchema = mongoose.Schema(
       require: true,
     },
     totale: {
-      type: Number,
+      type: String,
       require: true,
     },
     data: {
