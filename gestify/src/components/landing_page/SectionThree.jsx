@@ -30,7 +30,7 @@ const SectionThree = () => {
             src={Video}
             title="Youtube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; controls loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>

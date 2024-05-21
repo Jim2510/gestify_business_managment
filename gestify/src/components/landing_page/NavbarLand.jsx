@@ -22,7 +22,7 @@ export function NavbarLand() {
                             : (<FaBars size={30} style={{ color: '#89f9ea' }} />)}
     
                     </div>
-                    <button>
+                    <button className="font-bold" >
                         <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className='nav-item'>
                             <Link to='secone' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>Home</Link>
