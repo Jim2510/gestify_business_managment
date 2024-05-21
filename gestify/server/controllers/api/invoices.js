@@ -1,6 +1,6 @@
 const Invoice = require("../../db/models/Invoice");
 
-//get all products
+// get all invoices
 const getInvs = async (req, res) => {
   try {
     const invoices = await Invoice.find({});
@@ -11,7 +11,7 @@ const getInvs = async (req, res) => {
   }
 };
 
-//get single product by id
+// get single invoice by id
 const getInv = async (req, res) => {
   try {
     const { id } = req.params;
@@ -22,44 +22,52 @@ const getInv = async (req, res) => {
   }
 };
 
-//create product
+// create invoice
 const createInv = async (req, res) => {
   try {
-    const invoice = await Invoice.create(req.body);
-    res.status(200).json(Invoice);
+    const { description, tot, number } = req.body;
+    // Non includere il campo id nel corpo della richiesta
+    const invoice = new Invoice({
+      description,
+      tot,
+      number,
+    });
+    await invoice.save();
+    res.status(201).json(invoice);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-//update a product by id
+// update an invoice by id
 const updateInv = async (req, res) => {
   try {
     const { id } = req.params;
-    const invoice = await Invoice.findByIdAndUpdate(id, req.body);
+    const invoice = await Invoice.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
 
     if (!invoice) {
-      return res.status(404).json({ message: "product not found" });
+      return res.status(404).json({ message: "Invoice not found" });
     }
 
-    const updatedInv = await Product.findById(id);
-    res.status(200).json(updatedInv);
+    res.status(200).json(invoice);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-//delete a product by id
+// delete an invoice by id
 const deleteInv = async (req, res) => {
   try {
     const { id } = req.params;
     const invoice = await Invoice.findByIdAndDelete(id);
 
     if (!invoice) {
-      return res.status(404).json({ message: "product not found" });
+      return res.status(404).json({ message: "Invoice not found" });
     }
 
-    res.status(200).json({ message: "product deleted successfully" });
+    res.status(200).json({ message: "Invoice deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

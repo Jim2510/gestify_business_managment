@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dataSchema = new mongoose.Schema({
   id: {
     type: Number,
-    required: true,
+    required: false,
     unique: true,
   },
   description: {

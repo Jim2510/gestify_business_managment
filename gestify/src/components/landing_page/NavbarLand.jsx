@@ -3,7 +3,7 @@ import logo from "../../assets/gestify__1_-removebg-preview_1.png";
 import { useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa'
 import './Navbar.css'
-import {Link} from 'react-scroll'
+import {Link} from "react-scroll";
 
 export function NavbarLand() {
     const [click, setClick] = useState(false)
