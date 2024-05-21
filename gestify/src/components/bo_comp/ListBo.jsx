@@ -4,17 +4,46 @@ import { BtnF } from "./BtnF";
 import { FormF } from "./FormF";
 import { useFetchInvoices } from "../../hooks/useFetchInvoices";
 import { LoadingCircle } from "../../components/storage_comp/LoadingCircle";
+import { useState } from "react";
 
 const titleTable = ["Descrizione", "QT", "N°"];
 
 export function ListBo() {
+  const [selectedInvoices, setSelectedInvoices] = useState([]);
   const { data, isLoading } = useFetchInvoices();
+  data.forEach((invoice) => {
+    invoice.isSelected = false;
+  });
+
   const handleForm = () => {
     const form = document.getElementById("form");
     form.classList.toggle("hidden");
     form.classList.toggle("flex");
   };
   console.log(isLoading);
+
+  const handleCheckboxChange = (index) => {
+    const updatedData = [...data];
+    updatedData[index].isSelected = !updatedData[index].isSelected;
+    setSelectedInvoices(
+      updatedData.filter((invoice) => invoice.isSelected === true)
+    );
+  };
+
+  const handleRemove = async () => {
+    try {
+      const promises = selectedInvoices.map((invoice) =>
+        fetch(`http://localhost:3000/api/delete/${invoice.id}`, {
+          method: "DELETE",
+        })
+      );
+      await Promise.all(promises);
+      // Effettua un refresh dei dati dopo la rimozione
+      // Aggiorna lo stato o chiama nuovamente l'hook per caricare i dati aggiornati
+    } catch (error) {
+      console.error("Error removing invoices:", error);
+    }
+  };
 
   return (
     <>
@@ -27,11 +56,13 @@ export function ListBo() {
           />
         </div>
         {data &&
-          data.map((el) => (
+          data.map((el, index) => (
             <RowF
               description={el.description}
               tot={el.tot}
               number={el.number}
+              isSelected={el.isSelected}
+              onCheckboxChange={() => handleCheckboxChange(index)}
               key={el.id}
             />
           ))}
