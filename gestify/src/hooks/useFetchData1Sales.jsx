@@ -18,6 +18,7 @@ export function useFetchData1Sales() {
         }
     }).then(order => {
         setData(order)
+        console.log(order)
     }).catch(error => {
         console.log(error);
     })
