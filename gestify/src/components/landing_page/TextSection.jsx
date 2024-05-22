@@ -1,7 +1,7 @@
 export function TextSection() {
   return (
     <>
-      <div className="w-full flex py-44 mt-[100px]" id="secfour">
+      <div className="w-full flex py-44" id="secfour">
         <div className="w-[50%] flex flex-col items-center gap-4">
           <h2 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
             Benefits

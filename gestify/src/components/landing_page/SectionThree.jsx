@@ -5,9 +5,9 @@ import Tv from "../../assets/tvv.png";
 
 const SectionThree = () => {
   return (
-    <div className="demo w-full justify-center flex items-center mr-[250px] mt-[100px]" id="secthree">
+    <div className="demo w-full justify-center items-center " id="secthree">
       <div className="container w-full">
-        <div className="col-1 ">
+        <div className="col-1 ml-32">
           <p className="text-[#00df9a] font-bold ">DATA ANALYTICS DASHBOARD</p>
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
             Manage Data Analytics Centrally
@@ -18,9 +18,6 @@ const SectionThree = () => {
             research (including that of a Nobel laureate in Economics) and
             Behavioral Finance.
           </p>
-          {/* <button className="bg-black text-[#00df9a] hover:bg-teal-500 w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3">
-            Get Started
-          </button> */}
         </div>
         <div className="flex justify-center items-center relative">
           <img
@@ -35,7 +32,7 @@ const SectionThree = () => {
             src={Video}
             title="Youtube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; controls loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>

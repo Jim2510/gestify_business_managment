@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Analytics = () => {
   return (
-    <div className="w-full bg-white py-16 px-4 mt-[-115px] " id="sectwo">
+    <div className="w-full bg-white pt-16 pb-20 px-4 " id="sectwo">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
         <img className="w-[500px] mx-auto my-4" src={Laptop} alt="/" />
         <div className="flex flex-col justify-center ml-20">
@@ -18,12 +18,6 @@ const Analytics = () => {
             dolore autem cum ullam sed odit perspiciatis. Doloribus quos velit,
             eveniet ex deserunt fuga?
           </p>
-          <Link to={"/login"}>
-            {" "}
-            <button className="bg-black text-[#00df9a] hover:bg-teal-500 w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3">
-              Get Started
-            </button>
-          </Link>
         </div>
       </div>
     </div>
