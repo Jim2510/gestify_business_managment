@@ -22,19 +22,22 @@ export function NavbarLand() {
                             : (<FaBars size={30} style={{ color: '#89f9ea' }} />)}
     
                     </div>
-                    <button className="font-bold" >
+                    <button className="nav-item">
                         <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className='nav-item'>
                             <Link to='secone' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>Home</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='sectwo' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>About</Link>
+                            <Link to='sectwo' spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>Analytics</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='secthree' spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>Testimonials</Link>
+                            <Link to='secthree' spy={true} smooth={true} offset={-250} duration={500} onClick={closeMenu}>Company</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='secfour' spy={true} smooth={true} offset={-50} duration={500} onClick={closeMenu}>Demo</Link>
+                            <Link to='secfour' spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>Benefits</Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='secfive' spy={true} smooth={true} offset={-210} duration={500} onClick={closeMenu}>Cards</Link>
                         </li>
                     </ul>
                     </button>
