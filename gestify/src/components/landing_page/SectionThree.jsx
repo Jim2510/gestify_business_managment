@@ -25,15 +25,16 @@ const SectionThree = () => {
             src={Tv}
             alt=""
           />
-          <iframe
+          <video
             className="absolute top-[-10px]"
-            width="600"
+            width="570"
             height="320"
             src={Video}
             title="Youtube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            autoPlay
+            loop
+            controls
+            muted
           />
         </div>
       </div>

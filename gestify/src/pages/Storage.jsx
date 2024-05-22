@@ -65,7 +65,7 @@ export function Storage() {
     >
       <TitleSection titleName="STORAGE" />
       <div className="flex flex-col w-[85%] h-[75%] shadow-lg rounded-md overflow-auto 2xl:w-[80%] bg-[#FAFAFC] justify-center items-center">
-        <div className="top-[10px] bg-white w-[17%] h-[35px] rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center sticky">
+        <div className="top-[10px] bg-white w-[17%] h-fit rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -78,7 +78,7 @@ export function Storage() {
           </svg>
           <input
             style={inputStyle.input}
-            className="w-[70%] border-none text-[15px] h-[20%] bg-tranparent"
+            className="w-[70%] border-none text-[15px] h-fit bg-tranparent"
             onChange={(e) => {
               setSearchInput(e.target.value);
             }}
@@ -89,7 +89,7 @@ export function Storage() {
         </div>
         <div
           style={searchBar}
-          className="bg-white w-[17%] flex-col rounded-xl overflow-y-scroll absolute z-20 mt-[65px] h-[300px] ml-[10px]"
+          className="bg-white w-[13%] flex-col rounded-xl overflow-y-scroll absolute z-20 h-[300px] ml-[10px]"
         >
           
           {filteredProducts.map((result, id) => (
