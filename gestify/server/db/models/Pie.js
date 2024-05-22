@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 // Definisci lo schema per i dati del pie chart
 const PieDataSchema = new mongoose.Schema({
   name: {

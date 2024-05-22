@@ -29,6 +29,7 @@ export function FormF() {
       });
       if (response.ok) {
         console.log("Invoice added successfully");
+        window.location.reload();
       } else {
         console.error("Failed to add invoice", await response.text());
       }
