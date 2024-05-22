@@ -60,12 +60,12 @@ export function Storage() {
 
   return (
     <div
-      className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
+      className="flex flex-col w-full h-[100vh] text-center justify-center items-center bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]"
       onClick={() => setToggleSearchBar(false)}
     >
       <TitleSection titleName="STORAGE" />
       <div className="flex flex-col w-[85%] h-[75%] shadow-lg rounded-md overflow-auto 2xl:w-[80%] bg-[#FAFAFC] justify-center items-center">
-        <div className="top-[10px] bg-white w-[17%] h-fit rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center relative">
+        <div className="top-[10px] bg-white w-[17%] h-fit rounded-2xl shadow-lg mb-[20px] mt-[15px] ml-[15px] flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -89,7 +89,7 @@ export function Storage() {
         </div>
         <div
           style={searchBar}
-          className="bg-white w-[13%] flex-col rounded-xl overflow-y-scroll absolute z-20 h-[300px] ml-[10px]"
+          className="bg-white w-[13%] flex-col rounded-xl overflow-y-scroll absolute z-20 mt-[90px] h-[300px] ml-[10px]"
         >
           
           {filteredProducts.map((result, id) => (

@@ -104,7 +104,7 @@ export function Scheduler() {
         },
     };
     return (
-        <div className="flex flex-col w-[100vw] h-[100vh] text-center justify-center items-center pt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]">
+        <div className="flex flex-col w-full h-[100vh] text-center justify-center items-center pt-[30px] bg-gradient-to-b from-[#1cdafe] to-[#02f9ae]">
             <TitleSection titleName="CALENDAR" />
             <div className="w-[85%] h-[75%] overflow-y-auto mt-4">
                 <div className="grid grid-cols-8 grid-rows-26 w-full h-fit shadow-lg rounded-md bg-white relative font-semibold">
