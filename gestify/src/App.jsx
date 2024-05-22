@@ -28,6 +28,7 @@ function App() {
     <>
       <div className="w-full min-h-[100vh] flex">
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<Home />} />
           <Route path="/storage" element={<StorageLayout />} />
