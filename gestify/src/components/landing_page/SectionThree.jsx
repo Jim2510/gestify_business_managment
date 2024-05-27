@@ -8,15 +8,17 @@ const SectionThree = () => {
     <div className="demo w-full justify-center items-center " id="secthree">
       <div className="container w-full">
         <div className="col-1 ml-32">
-          <p className="text-[#00df9a] font-bold ">DATA ANALYTICS DASHBOARD</p>
+          <p className="text-[#00df9a] font-bold ">OPTIMIZE BUSINESS OPERATIONS</p>
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
-            Manage Data Analytics Centrally
+            The Integrated Management System
           </h1>
           <p className="">
-            Every single one of our financial advisors receives rigorous
-            training according to John Doe’s philosophy based on academic
-            research (including that of a Nobel laureate in Economics) and
-            Behavioral Finance.
+            Discover Gestify, the management software designed to optimize every
+            aspect of your business. From human resources management to
+            accounting, from logistics to customer relationship management, our
+            integrated management system offers a complete and customizable
+            solution to improve operational efficiency and support the growth of
+            your company.
           </p>
         </div>
         <div className="flex justify-center items-center relative">

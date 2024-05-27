@@ -13,10 +13,13 @@ const Analytics = () => {
             Manage Data Analytics Centrally
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            molestiae delectus culpa hic assumenda, voluptate reprehenderit
-            dolore autem cum ullam sed odit perspiciatis. Doloribus quos velit,
-            eveniet ex deserunt fuga?
+            Gestify's data analytics function transforms company data into
+            strategic information. With advanced reporting and visualization
+            tools, you can monitor performance in real time, identify trends and
+            growth opportunities, and make informed decisions based on accurate
+            data. The integration with the various company departments allows a
+            holistic view of operations, facilitating the planning and
+            optimization of processes.
           </p>
         </div>
       </div>
