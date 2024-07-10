@@ -1,21 +1,21 @@
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Btn() {
   const buttons = [
-    { title: "Home", path: "/homepage" },
-    { title: "Dashboard", path: "/dashboard/tables" },
-    { title: "Events", path: "/scheduler/calendar" },
-    { title: "Storage", path: "" },
+    { title: "DASHBOARD", path: "/dashboard/sales" },
+    { title: "EVENTS", path: "/scheduler/calendar" },
+    { title: "BACKOFFICE", path: "/backoffice" },
+    { title: "STORAGE", path: "/storage" },
+    { title: "ORDERS", path: "/orderhistory" },
   ];
 
   return (
     <>
       {buttons.map((btn, index) => (
         <Button key={index}>
-          {/* <Link to={btn.path}></Link> */}
-          {btn.title}
+          <Link to={btn.path}>{btn.title}</Link>
         </Button>
       ))}
     </>
@@ -43,11 +43,9 @@ function Button({ children, btn }) {
       onMouseLeave={handleMouseLeave}
       className="text-[14px] relative flex flex-col justify-center items-center h-full rounded-xl dark:hover:shadow-gray-100 px-5 py-1 text-black dark:text-white"
     >
-      {/* <Link to=></Link> */}
-      {btn}
-      {children}
+      <Link to={btn}>{children}</Link>
       <animated.div
-        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#02f9ae] h-[2px]"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#89f9ea] h-[4px]"
         style={sidebarSpring}
       ></animated.div>
     </button>
@@ -58,11 +56,6 @@ export function BtnNav() {
   return (
     <>
       <div className="font-semibold px-4 md:flex hidden justify-center items-center">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-[200px] min-w-100px rounded-xl px-5 border-2 focus:ring-green-500 focus:border-[#02f9ae] focus:ring-1 focus:outline-none border-gray-400 mr-2 h-8"
-        />
         <Btn />
       </div>
     </>

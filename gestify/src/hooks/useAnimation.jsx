@@ -4,6 +4,8 @@ import { useState } from "react";
 export function useAnimation() {
   const [isHidden, setIsHidden] = useState(false);
   const [userHidden, setUserHidden] = useState(false);
+  const [isHover, setIsHover] = useState(true);
+  const [onHover, setOnHover] = useState(true);
 
   const handleHidden = () => {
     setIsHidden(!isHidden);
@@ -11,6 +13,10 @@ export function useAnimation() {
 
   const handleUserHidden = () => {
     setUserHidden(!userHidden);
+  };
+
+  const handleHover = () => {
+    setOnHover(!onHover);
   };
 
   const springs = useSpring({
@@ -38,7 +44,20 @@ export function useAnimation() {
   });
 
   const navSpring = useSpring({
-    width: userHidden ? 250 : 0,
+    width: userHidden ? 250 : -50,
+  });
+
+  const cardStyle = useSpring({
+    width: window.matchMedia("(min-width: 1500px)").matches ? 180 : 160,
+    height: window.matchMedia("(min-width: 1500px)").matches ? 180 : 160,
+    config: { duration: 200 },
+    transform: isHover ? `scale(${1})` : `scale(${1.5})`,
+    zIndex: isHover ? 1 : 20,
+  });
+
+  const styleBtn = useSpring({
+    background: onHover ? "transparent" : "white",
+    color: onHover ? "white" : "black",
   });
 
   return {
@@ -49,5 +68,12 @@ export function useAnimation() {
     navSpring,
     handleHidden,
     handleUserHidden,
+    cardStyle,
+    isHover,
+    setIsHover,
+    onHover,
+    setOnHover,
+    handleHover,
+    styleBtn,
   };
 }

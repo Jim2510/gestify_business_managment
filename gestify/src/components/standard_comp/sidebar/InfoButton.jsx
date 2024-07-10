@@ -3,12 +3,12 @@ export function InfoButton() {
     <>
       <div className="flex py-5 justify-center items-center gap-3">
         <div className="rounded shadow-2xl">
-          <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] bg-[#02f9ae] hover:bg-[#00ca8e] transition-colors ease-in-out rounded-full">
+          <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] bg-[#89f9ea] hover:bg-[#64ffea] transition-colors ease-in-out rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="white"
+              fill="black"
               class="bi bi-box-arrow-up-right "
               viewBox="0 0 16 16"
             >
@@ -23,12 +23,12 @@ export function InfoButton() {
             </svg>
           </button>
         </div>
-        <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] hover:bg-[#00ca8e] transition-colors ease-in-out delay-75  bg-[#02f9ae] rounded-full shadow-2xl">
+        <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] hover:bg-[#64ffea] transition-colors ease-in-out delay-75  bg-[#89f9ea] rounded-full shadow-2xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="white"
+            fill="black"
             class="bi bi-phone"
             viewBox="0 0 16 16"
           >
@@ -36,24 +36,24 @@ export function InfoButton() {
             <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
           </svg>
         </button>
-        <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] bg-[#02f9ae] rounded-full shadow-2xl hover:bg-[#00ca8e] transition-colors ease-in-out delay-75 ">
+        <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] bg-[#89f9ea] rounded-full shadow-2xl hover:bg-[#64ffea] transition-colors ease-in-out delay-75 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="white"
+            fill="black"
             class="bi bi-envelope"
             viewBox="0 0 16 16"
           >
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
           </svg>
         </button>
-        <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] bg-[#02f9ae] rounded-full shadow-2xl hover:bg-[#00ca8e] transition-colors ease-in-out delay-75 ">
+        <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] bg-[#89f9ea] rounded-full shadow-2xl hover:bg-[#64ffea] transition-colors ease-in-out delay-75 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="white"
+            fill="black"
             class="bi bi-calendar-week"
             viewBox="0 0 16 16"
           >
@@ -61,12 +61,12 @@ export function InfoButton() {
             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
           </svg>
         </button>
-        <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] bg-[#02f9ae] rounded-full shadow-2xl hover:bg-[#00ca8e] transition-colors ease-in-out delay-75 ">
+        <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] bg-[#89f9ea] rounded-full shadow-2xl hover:bg-[#64ffea] transition-colors ease-in-out delay-75 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="white"
+            fill="black"
             class="bi bi-file-earmark-text"
             viewBox="0 0 16 16"
           >
@@ -74,12 +74,12 @@ export function InfoButton() {
             <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
           </svg>
         </button>
-        <button className="active:bg-[#519e64] flex justify-center items-center w-[40px] h-[40px] bg-[#02f9ae] rounded-full shadow-2xl hover:bg-[#00ca8e] transition-colors ease-in-out delay-75 ">
+        <button className="active:bg-[#3b998d] border-2 border-black flex justify-center items-center w-[40px] h-[40px] bg-[#89f9ea] rounded-full shadow-2xl hover:bg-[#64ffea] transition-colors ease-in-out delay-75 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="white"
+            fill="black"
             class="bi bi-gear"
             viewBox="0 0 16 16"
           >

@@ -1,60 +1,30 @@
 export function MenuSidebar() {
+  const arrbtn = [
+    { name: "PROFILE", src: "../../src/assets/person-circle.svg" },
+    { name: "EMAIL", src: "../../src/assets/envelope.svg" },
+    { name: "TICKETS", src: "../../src/assets/ticket.svg" },
+    { name: "REMINDER", src: "../../src/assets/alarm.svg" },
+    { name: "NOTE", src: "../../src/assets/journal.svg" },
+    { name: "SETTINGS", src: "../../src/assets/gear.svg" },
+  ];
+
   return (
     <>
-      <div className="flex justify-center items-center mt-10 flex-col relative">
-        <div className="flex flex-row w-full justify-center items-center">
-          <div className="w-[30%] border-b-2 mr-3"></div>
-          <h3 className="dark:text-gray-200 text-gray-600">MENU</h3>
-          <div className="w-[30%] border-b-2 ml-3"></div>
+      <div className="flex justify-center items-center mt-10 flex-col relative font-semibold">
+        <div className="flex flex-row w-full justify-start pl-8 shadow-2xl items-center">
+          <h3 className="dark:text-gray-200 w-full">MENU</h3>
         </div>
-        <div className="w-full my-5 flex flex-col justify-center gap-4 items-center text-[14px] transition-colors ease-in-out delay-300">
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              ACTIVITIES
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              NOTES
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              EMAIL
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              TASKS
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              MEETINGS
-            </span>
-          </button>
-        </div>
-        <div className="flex flex-row w-full justify-center items-center">
-          <div className="w-[30%] border-b-2 mr-3"></div>
-          <h3 className="dark:text-gray-200 text-gray-600">HELP</h3>
-          <div className="w-[30%] border-b-2 ml-3"></div>
-        </div>
-        <div className="w-full my-5 flex flex-col justify-center gap-4 items-center text-[14px] transition-colors ease-in-out delay-300">
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              CONTACTS
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              ABOUT
-            </span>
-          </button>
-          <button className="px-5 flex justify-center items-center rounded-2xl p-2">
-            <span className="dark:text-white  dark:hover:text-gray-400 text-gray-500 hover:text-black">
-              REPORT
-            </span>
-          </button>
+        <div className="grid grid-rows-6 w-full pl-6 pr-14 mt-5 gap-2 text-[14px] ">
+          {arrbtn &&
+            arrbtn.map((el, index) => (
+              <div
+                key={index}
+                className="p-2 shadow-2xl cursor-pointer bg-white/40 flex justify-start items-center hover:bg-white active:bg-white/40"
+              >
+                <img width={20} height={20} src={el.src} alt="" />
+                <h2 className="pl-4">{el.name}</h2>
+              </div>
+            ))}
         </div>
       </div>
     </>
